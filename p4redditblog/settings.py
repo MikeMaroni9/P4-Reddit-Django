@@ -30,7 +30,7 @@ SECRET_KEY = 'sdfsd09823jSDADFmkl23412'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', 'project4-django-blog-x-24e6733e46ab.herokuapp.com', '8000-mikemaroni9-p4redditdja-wgt7jq7rhok.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', 'project4-django-blog-x-24e6733e46ab.herokuapp.com', '8000-mikemaroni9-p4redditdja-0dqq6p7w7nt.ws-eu104.gitpod.io']
 
 
 # Application definition
