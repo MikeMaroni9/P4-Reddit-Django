@@ -5,6 +5,7 @@ from .models import Post
 class Home(ListView):
     model = Post
     template_name = 'index.html'
+    paginate_by = 6
 
 class PostDetail(DetailView):
     model = Post
