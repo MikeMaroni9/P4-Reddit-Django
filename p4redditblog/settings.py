@@ -30,7 +30,7 @@ SECRET_KEY = 'sdfsd09823jSDADFmkl23412'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-y00vmowll4r.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-6z0073gppdm.ws-eu104.gitpod.io']
 
 
 # Application definition
