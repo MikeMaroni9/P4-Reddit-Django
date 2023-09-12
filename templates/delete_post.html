@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <h2>Delete Post</h2>
 
 <h2>Delete: {{ post.title }} </h2>
@@ -16,4 +18,16 @@
 <br>
 <br>
 
+{% else %}
+
+Please LOGIN to delete the post !
+
+{% endif %}
+
 {% endblock %}
+
+
+
+
+
+
