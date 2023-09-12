@@ -10,7 +10,7 @@
         <!-- Post title goes in these h1 tags -->
         <h1 class="post-title">{{ post.title }}</h1>
         <!-- Post author goes before the | the post's created date goes after -->
-        <p class="post-subtitle">{{ post.author }} - <a href="{% url 'editpost' post.pk%}">(edit)</a> {{ post.created_on }}</p>
+        <p class="post-subtitle">{{ post.author }} - <a href="{% url 'editpost' post.pk%}">(edit)</a> <a href="{% url 'deletepost' post.pk%}">(delete)</a> {{ post.created_on }}</p>
         <br>
         <p class="post-subtitle">{{ post.content }}</p>
         <button type="button" class="btn btn-danger"><a href="{% url 'index' %}">Back</a></button>
