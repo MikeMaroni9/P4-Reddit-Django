@@ -12,8 +12,10 @@
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle">{{ post.author }} - {{ post.created_on }}</p>
         {% if user.is_authenticated %}
-            <a href="{% url 'editpost' post.pk%}">(edit)</a> 
-            <a href="{% url 'deletepost' post.pk%}">(delete)</a> 
+            {% if user.id == post.author.id %}
+                <a href="{% url 'editpost' post.pk%}">(edit)</a> 
+                <a href="{% url 'deletepost' post.pk%}">(delete)</a> 
+            {% endif %}
         {% endif %}
         
         <br>

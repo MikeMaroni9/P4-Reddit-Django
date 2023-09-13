@@ -3,31 +3,22 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
 
-<h2>Delete Post</h2>
+        <h2>Delete Post</h2>
 
-<h2>Delete: {{ post.title }} </h2>
-<form method="POST">
-    {% csrf_token %}
-    <p> Are you sure you want to delete this post ?</p>
-    <button>Delete Post</button>
+        <h2>Delete: {{ post.title }} </h2>
+        <form method="POST">
+            {% csrf_token %}
+            <p> Are you sure you want to delete this post ?</p>
+            <button>Delete Post</button>
 
+        <br>
 
-
-
-<br>
-<br>
-
-{% else %}
-
-Please LOGIN to delete the post !
+    {% else %}
+        Please LOGIN to delete the post !
+    {% endif %}
 
 {% endif %}
 
 {% endblock %}
-
-
-
-
-
-

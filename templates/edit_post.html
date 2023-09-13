@@ -4,20 +4,21 @@
 
 
 {% if user.is_authenticated %}
-<h2> EDIT POST</h2>
+    {% if user.id == post.author.id %}
+        <h2> EDIT POST</h2>
 
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button>Edit</button>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+        <button>Edit</button>
 
-<br>
-<br>
+        <br>
+        <br>
+    {% else %}
+        Please LOGIN to edit the post !
+    {% endif %}
 
-{% else %}
-
-Please LOGIN to edit the post !
 
 {% endif %}
 
