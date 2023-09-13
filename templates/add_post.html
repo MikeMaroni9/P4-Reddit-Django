@@ -2,18 +2,24 @@
 
 {% block content %}
 
-<h2> ADD MOCKDDIT POST</h2>
+
+{% if user.is_authenticated%}
+    <h2> ADD MOCKDDIT POST</h2>
 
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button>Post</button>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button>Post</button>
 
 
 
 
-<br>
-<br>
+    <br>
+    <br>
+
+{% else %}
+    Please LOGIN to create a New Post! 
+{% endif %}
 
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post
+from .models import Post,Comment
 from django.urls import reverse_lazy
 from .forms import CommentForm
 
@@ -38,6 +38,12 @@ class AddPost(CreateView):
     model = Post
     template_name = 'add_post.html'
     fields = 'title', 'content', 'author',
+
+class AddComment(CreateView):
+    model = Comment
+    template_name = 'add_comment.html'
+    fields = 'body', 'post','name',
+    success_url = reverse_lazy('index')
 
 class EditPost (UpdateView):
     model = Post
