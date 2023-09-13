@@ -7,35 +7,40 @@
 
 <div class="container text-white">
     <div class="row g-0">
-    <div class="col-md-6 masthead-text">
+    <div class="col-md-10 masthead-text">
         <!-- Post title goes in these h1 tags -->
         <h1 class="post-title">{{ post.title }}</h1>
-        <!-- Post author goes before the | the post's created date goes after -->
-        <p class="post-subtitle text-danger">Post By : {{ post.author }}</p>
-        <p class="post-subtitle"><small>{{ post.created_on }}</small></p>
-
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
-                <a href="{% url 'editpost' post.pk%}">(edit)</a> 
-                <a href="{% url 'deletepost' post.pk%}">(delete)</a> 
+                
+                <a href="{% url 'editpost' post.pk%}">
+                <button type="button" class="btn btn-light">edit</button> 
+                </a>
+                <a href="{% url 'deletepost' post.pk%}"> 
+                <button type="button" class="btn btn-danger">delete</button>
+                </a>
             {% endif %}
         {% endif %}
-        
+        <!-- Post author goes before the | the post's created date goes after -->
+        <p class="post-subtitle text-dark"><span class="text-white">Post By :</span> <strong>{{ post.author }}</strong></p>
+        <p class="post-subtitle"><small>{{ post.created_on }}</small></p>
         <br>
-        <p class="post-subtitle">{{ post.content }}</p>
+        <p class="post-subtitle post-content">{{ post.content }}</p>
         <a href="{% url 'index' %}">
         <button type="button" class="btn btn-danger">Back</button>
+        </a>
+        <br><br>
+        <a href="{% url 'newcomment' post.pk %}">
+            <button type="button" class="btn btn-light">Add Comment</button>
         </a>
         </div>
     </div>
 </div>
 <br>
 <br>
-<a href="{% url 'newcomment' post.pk %}">
-<button type="button" class="btn btn-light">Add Comment</button>
-</a>
-<div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
+
+<div class="container">
+    <div class="col-md-10 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
             <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -43,7 +48,7 @@
             <div class="comments" style="padding: 10px;">
                 <p class="font-weight-bold">
                     <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                    {{ comment.name }}
+                    <span class="text-danger"><strong>{{ comment.name }}</strong></span>
                     <span class=" text-muted font-weight-normal">
                         <!-- The comment's created date goes here -->
                         {{ comment.created_on }}
@@ -54,27 +59,6 @@
             </div>
             <!-- Our for loop ends here -->
             {% endfor %}
-        </div>
-    </div>
-    <div class="col-md-4 card mb-4  mt-3 ">
-        <div class="card-body">
-            <!-- For later -->
-            {% if commented %}
-            <div class="alert alert-success" role="alert">
-                Your comment is awaiting approval
-            </div>
-            {% else %}
-            {% if user.is_authenticated %}
-
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% endif %}
-            {% endif %}
         </div>
     </div>
 </div>

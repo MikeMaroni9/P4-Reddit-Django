@@ -2,18 +2,17 @@
 
 {% block content %}
 
-<h2>New Comment</h2>
+<div class="container text-white d-flex justify-content-center">
+    <div class="row g-0">
+        <div class="col-md-10 masthead-text">
+            <h2>New Comment</h2>
 
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button>Add Comment</button>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p}}
+            <button class="btn btn-danger">Add Comment</button>
+            
 
-
-
-
-<br>
-<br>
 
 {% endblock %}
