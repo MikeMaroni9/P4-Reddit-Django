@@ -24,11 +24,12 @@
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle text-dark"><span class="text-white">Post By :</span> <strong>{{ post.author }}</strong></p>
         <p class="post-subtitle"><small>{{ post.created_on }}</small></p>
-        <br>
-        <p class="post-subtitle post-content">{{ post.content }}</p>
         <a href="{% url 'index' %}">
-        <button type="button" class="btn btn-danger">Back</button>
+            <button type="button" class="btn btn-danger">Back</button>
         </a>
+        <br>
+        <hr>
+        <p class="post-subtitle post-content">{{ post.content }}</p>
         <br>
         <div class="col-1">
             <strong>
@@ -36,19 +37,26 @@
                 <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="fas fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="fas fa-heart text-danger"></i></button>
                     {% else %}
-                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="far fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="far fa-heart text-danger"></i></button>
                     {% endif %}
                 </form>
                 {% else %}
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
                 <!-- The number of likes goes before the closing strong tag -->
-                <span class="text-secondary">{{ post.number_of_likes }}</span>
+                <span class="text-secondary text-white">{{ post.number_of_likes }}</span>
             </strong>
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary text-white"><i class="far fa-comments"></i>
+                <!-- Our total_comments variable goes before the closing strong tag -->
+                {{ total_comments }}</strong>
+            {% endwith %}
+        </div>
         </div>
         <br>
+        <hr>
         <a href="{% url 'newcomment' post.pk %}">
             <button type="button" class="btn btn-light">Add Comment</button>
         </a>

@@ -72,3 +72,9 @@ a:hover {
 .page-link:hover {
     color:red;
 }
+
+/* Index Page, Content Size */
+.postcontent {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
