@@ -1,3 +1,27 @@
 .dark-bg {
-    background-color: #445261;
+    background-color: #00539C;
+}
+
+body {background-color: #00539C;}
+
+
+.navbar-brand {
+    font-size:3.25rem
+
+}
+
+.nav-item {
+    font-size:2rem
+}
+
+.navbar {
+    font-weight: 600;
+}
+
+a {
+    color: #EEA47F;
+}
+
+.nav-link {
+    color:#EEA47F;
 }

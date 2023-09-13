@@ -20,20 +20,16 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary dark-bg">
+    <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'index' %}">mockddit</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+            <ul class="nav justify-content-center">
               {% if user.is_authenticated %}
-            </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'addpost' %}">Create New Post</a>
+                <a class="nav-link" href="{% url 'addpost' %}">New Post</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -46,9 +42,20 @@
               </li>
               {% endif %}
             </ul>
-          </div>
         </div>
       </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     <main class="flex-shrink-0 main-bg">
         {% block content %}
 
@@ -60,6 +67,13 @@
 <footer class="footer mt-auto py-3 dark-bg">
   <p class="m-0 text-center text-white">Project 4 : mockddit</p>
 </footer>
+<script>
+  setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+  }, 2500);
+</script>
 </body>
 
 </html>
