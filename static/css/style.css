@@ -1,27 +1,44 @@
 .dark-bg {
-    background-color: #00539C;
+    background-color: #7c8893;
 }
 
-body {background-color: #00539C;}
+body {background-color: #70808e;}
 
 
 .navbar-brand {
     font-size:3.25rem
-
 }
 
+
 .nav-item {
-    font-size:2rem
+    font-size:2.2rem
 }
 
 .navbar {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 a {
-    color: #EEA47F;
+    color: red;
+    text-decoration: none;
 }
+
+a:hover { 
+    color: #e8bd3b;
+}
+
 
 .nav-link {
     color:#EEA47F;
+}
+
+
+.nav-link:hover { color: #e8bd3b; }
+
+.btn-light {
+
+}
+
+.btn-danger {
+    background-color: red;
 }

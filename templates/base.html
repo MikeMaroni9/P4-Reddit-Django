@@ -1,7 +1,7 @@
 {% load static %}
 
 <head>
-    <title>mockddit</title>
+    <title >mockddit</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -22,23 +22,32 @@
 
     <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'index' %}">mockddit</a>
+          <a class="navbar-brand" href="{% url 'index' %}"><span style="color: white">mockdd<span style="color: red">i</span>t</span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
             <ul class="nav justify-content-center">
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'addpost' %}">New Post</a>
+                <a class="nav-link" href="{% url 'addpost' %}">
+                <button type="button" class="btn btn-light btn-lg">New Post</button>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link" href="{% url 'account_logout' %}">
+                <button type="button" class="btn btn-danger btn-lg">Logout</button>
+                </a>
+                
               </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                <a class="nav-link" href="{% url 'account_signup' %}">
+                <button type="button" class="btn btn-light btn-lg">Register</button>
+                </a>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                <a class="nav-link" href="{% url 'account_login' %}">
+                <button type="button" class="btn btn-light btn-lg">Login</button>
+                </a>
               </li>
               {% endif %}
             </ul>
@@ -65,7 +74,7 @@
     </main>
     <!-- Footer -->
 <footer class="footer mt-auto py-3 dark-bg">
-  <p class="m-0 text-center text-white">Project 4 : mockddit</p>
+  <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a><it</p></strong>
 </footer>
 <script>
   setTimeout(function () {
