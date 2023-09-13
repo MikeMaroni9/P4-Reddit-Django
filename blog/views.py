@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views import generic, View
 from .models import Post,Comment
+from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .forms import CommentForm
 
@@ -55,3 +57,13 @@ class DeletePost (DeleteView):
     template_name = "delete_post.html"
     success_url = reverse_lazy('index')
     
+class PostLike(View):
+    
+    def post(self, request, pk, *args, **kwargs):
+        post = get_object_or_404(Post, pk=pk)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('postdetail', args=[pk]))
