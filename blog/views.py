@@ -77,3 +77,7 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('postdetail', args=[pk]))
+
+#Profile for NavBar
+def profile(request):
+    return render(request, 'profile.html')
