@@ -26,6 +26,10 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-signup right btn-light" type="submit">{% trans "Sign In" %}</button>
+        <button type="button" class="btn btn-danger" class="socialaccount_providers text-white">
+          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+          </button>
+          {% include "socialaccount/snippets/login_extra.html" %}
       </form>
     </div>
   </div>
@@ -33,13 +37,9 @@
 <div>
   
 
-    <ul class="socialaccount_providers">
-      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-    </ul>
   
   
   
-  {% include "socialaccount/snippets/login_extra.html" %}
   
   
 {% endblock %}
