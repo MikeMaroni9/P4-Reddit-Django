@@ -48,12 +48,14 @@ class AddPost(CreateView):
 class AddComment(CreateView):
     model = Comment
     template_name = 'add_comment.html'
-    fields = 'body', 'post',
+    fields = 'body',
     success_url = reverse_lazy('index')
 
     def form_valid(self, form):
         form.instance.name = self.request.user
+        form.instance.post_id = self.kwargs.get('pk')
         return super().form_valid(form)
+
 
 class EditPost (UpdateView):
     model = Post
