@@ -30,7 +30,7 @@ SECRET_KEY = 'sdfsd09823jSDADFmkl23412'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-pralakig0vy.ws-eu104.gitpod.io', 'project4-django-blog-x-24e6733e46ab.herokuapp.com',]
+ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-o8339snscw4.ws-eu104.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-pralakig0vy.ws-eu104.gitpod.io', 'project4-django-blog-x-24e6733e46ab.herokuapp.com', 'http://localhost:8000/admin/']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     'django.contrib.staticfiles',
     'django_summernote',
     'crispy_forms',
@@ -62,6 +63,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,6 +73,19 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '123',
+            'secret': '456',
+            'key': ''
+        }
+    }
+}
 
 ROOT_URLCONF = 'p4redditblog.urls'
 
@@ -91,6 +106,17 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    ...
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+    ...
+]
+
 
 WSGI_APPLICATION = 'p4redditblog.wsgi.application'
 
