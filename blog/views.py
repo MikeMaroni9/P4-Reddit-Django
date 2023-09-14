@@ -39,13 +39,21 @@ class PostDetail(DetailView):
 class AddPost(CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = 'title', 'content', 'author',
+    fields = 'title', 'content', 
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class AddComment(CreateView):
     model = Comment
     template_name = 'add_comment.html'
-    fields = 'body', 'post','name',
+    fields = 'body', 'post',
     success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        form.instance.name = self.request.user
+        return super().form_valid(form)
 
 class EditPost (UpdateView):
     model = Post
