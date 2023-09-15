@@ -95,48 +95,44 @@
 <h2>Used Materials / References</h2>
 <p>"CI" I Think Therefore I Blog project</p>
 <p>"CI" Hello Django project</p>
-<p>Auto assigning author to the posts :</p>
-<a href="https://www.youtube.com/watch?v=-s7e_Fy6NRU&t=1573s&ab_channel=CoreySchafer">CoreySchafer</a>
-<p>Profile Page edits :</p>
-<a href="https://www.youtube.com/watch?v=D9Xd6jribFU&ab_channel=MaxGoodridge">Max Goodridge</a>
-<p>Google Auth addon:</p>
-<a href="https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8">AllAuth</a>
+<p>Auto assigning author to the posts : <a href="https://www.youtube.com/watch?v=-s7e_Fy6NRU&t=1573s&ab_channel=CoreySchafer">CoreySchafer</a></p>
+
+<p>Profile Page edits : <a href="https://www.youtube.com/watch?v=D9Xd6jribFU&ab_channel=MaxGoodridge">Max Goodridge</a></p>
+
+<p>Google Auth addon: <a href="https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8">AllAuth</a></p>
+
 
 
 
 <h2>Deployment<h2>
 <p>1.Installing gunicorn server to run Django on heroku</p>
-<img src="">
+<a href="https://ibb.co/Z8FVtm5"><img src="https://i.ibb.co/Z8FVtm5/dep1.png" alt="dep1" border="0" /></a>
 <p>2.Install psycopg2 adapted for PostgreSQL database</p>
-<img src="">
+<a href="https://ibb.co/TqdQZd6"><img src="https://i.ibb.co/TqdQZd6/dep2.png" alt="dep2" border="0" /></a>
 <p>Creating a Requirements.txt file for necessery dependencies</p>
 <a href="https://ibb.co/8zTn72y"><img src="https://i.ibb.co/8zTn72y/mainpicture18.png" alt="mainpicture18" border="0" /></a>
 <p>Creatign a new project in Django</p>
-<img src="">
+<a href="https://ibb.co/VVMd79Y"><img src="https://i.ibb.co/VVMd79Y/dep4.png" alt="dep4" border="0" /></a>
 <p>Creating the blogg app</p>
-<img src="">
+<a href="https://ibb.co/h7wXvLr"><img src="https://i.ibb.co/h7wXvLr/dep5.png" alt="dep5" border="0" /></a>
 <p>Linking GitHub repository to Heroku</p>
-<img src="">
+<a href="https://ibb.co/3Y9qzHd"><img src="https://i.ibb.co/3Y9qzHd/dep6.png" alt="dep6" border="0" /></a>
 <p>Creating a PostgreSQL database</p>
-<img src="">
+<a href="https://ibb.co/3kp0ZjK"><img src="https://i.ibb.co/3kp0ZjK/dep7.png" alt="dep7" border="0" /></a>
 <p>Adjusting env.py and settings.py files</p>
-<img src="">
 <p>Setting Config Vars in Heroku</p>
-<img src="">
+<a href="https://ibb.co/4MmGjNw"><img src="https://i.ibb.co/4MmGjNw/dep8.png" alt="dep8" border="0" /></a>
 <p>Creating a Procfile</p>
-<img src="">
+<a href="https://ibb.co/wzQ5B9J"><img src="https://i.ibb.co/wzQ5B9J/dep9.png" alt="dep9" border="0" /></a>
 <p>Set Debug Mode to False</p>
-<img src="">
+<a href="https://ibb.co/bmWZc4Q"><img src="https://i.ibb.co/bmWZc4Q/dep11.png" alt="dep11" border="0" /></a>
 <p>Add - X_FRAME_OPTIONS ='SAMEORIGIN' to settings file.</p>
-<img src="">
+<a href="https://ibb.co/bmWZc4Q"><img src="https://i.ibb.co/bmWZc4Q/dep11.png" alt="dep11" border="0" /></a>
 <p>Deploying a project on Heroku</p>
-<img src="">
+<a href="https://ibb.co/Kj8gPW1"><img src="https://i.ibb.co/Kj8gPW1/dep10.png" alt="dep10" border="0" /></a>
 <p>I have committed all the files and pushed them on to the repository. </p>
 <p>Created requirement file for the dependencies used for the project to run:</p>
-
-
-
-
+<hr>
 <h2> The Persistent Problems </h2>
 <p>Wanted to include more login functionality, forgot password etc. Couldn't get mail server to work. SendGrid didn't let me access the account. Might be because of the VPN use.</p>
 <p>Couldn't figure out how to include more comments functionality, to edit and delete them.</p>
