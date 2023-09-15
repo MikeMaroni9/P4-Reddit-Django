@@ -6,6 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 Registering Post model to the ADMIN panel
 """
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -14,12 +15,14 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     summernote_fields = ('content',)
 
+
 """
 Registering Comment model to the ADMIN panel
 """
+
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')

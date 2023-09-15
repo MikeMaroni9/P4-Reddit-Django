@@ -4,7 +4,7 @@ from django.urls import reverse
 
 
 """
-Status for Posts, Draft or Published. It is set to be Published by default. 
+Status for Posts, Draft or Published. It is set to be Published by default.
 """
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -12,13 +12,16 @@ STATUS = ((0, "Draft"), (1, "Published"))
 """
 Form for creating a New Post
 """
+
+
 class Post(models.Model):
-    title = models.CharField(max_length=200, unique = True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    title = models.CharField(max_length=200, unique=True)
+    author = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS,default = 1)
+    status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
 
     class Meta:
@@ -37,6 +40,8 @@ class Post(models.Model):
 """
 Form for creating a New Comment
 """
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
