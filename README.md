@@ -84,7 +84,7 @@
 <hr>
 
 <p>Am I responsive Test:</p>
-<img src="">
+<img src="../P4-Reddit-Django/media/dep11.png">
 
 <p>Lighthouse Test:</p>
 <img src="">
