@@ -133,9 +133,11 @@
 <img src="">
 <p>Creating a Procfile</p>
 <img src="">
-<p>Deploying a project on Heroku</p>
+<p>Set Debug Mode to False</p>
 <img src="">
-<p></p>
+<p>Add - X_FRAME_OPTIONS ='SAMEORIGIN' to settings file.</p>
+<img src="">
+<p>Deploying a project on Heroku</p>
 <img src="">
 <p>I have committed all the files and pushed them on to the repository. </p>
 <p>Created requirement file for the dependencies used for the project to run:</p>
