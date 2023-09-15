@@ -20,32 +20,32 @@
 
 
 <p>Upon opening a page, you are greeted with pre-filled reddit style page. All content is taken from the original reddit page, including the comments and chosen randomly without particular agenda</p>
-<img src="">
+<a href="https://ibb.co/1JsMnZB"><img src="https://i.ibb.co/1JsMnZB/mainpicture1.png" alt="mainpicture1" border="0" /></a>
 
 
 <p>For visitors that are not signed-up and logged in, you are greeted with mockddit logo which acts as a link button to index page, and two buttons on the opposite side. Register and Login</p>
-<img src="">
+<a href="https://ibb.co/NjVBh1h"><img src="https://i.ibb.co/NjVBh1h/mainpicture2.png" alt="mainpicture2" border="0" /></a>
 
 <p>Register, takes you to the sign-up form that asks for username and password input, leaving email - optional.</p>
-<img src="">
+<a href="https://ibb.co/rFgyG1Z"><img src="https://i.ibb.co/rFgyG1Z/mainpicture3.png" alt="mainpicture3" border="0" /></a>
 
 <p>Login, takes you to login page for prerigistered users and there's also a choice to sign in with google account, connected to Google API on the backend.</p>
-<img src="">
+<a href="https://ibb.co/mJywvxy"><img src="https://i.ibb.co/mJywvxy/mainpicture4.png" alt="mainpicture4" border="0" /></a>
 
 <p>If you decide to sign in using goolge account, first you will be taken to the process page to check if you really like to perform this action</p>
-<img src="">
+<a href="https://ibb.co/Kr2wssp"><img src="https://i.ibb.co/Kr2wssp/mainpicture6.png" alt="mainpicture6" border="0" /></a>
 
 <p>And then taken to the google login screen</p>
-<img src="">
+<a href="https://ibb.co/PNdcJwY"><img src="https://i.ibb.co/PNdcJwY/mainpicture7.png" alt="mainpicture7" border="0" /></a>
 
 <p>Upon signing in, you will be returned to the index page. Bootstrap alert message will confirm that you have logged in/logged out. MSG will dissapear after few secons.</p>
-<img src="">
+<a href="https://ibb.co/SmvYtmv"><img src="https://i.ibb.co/SmvYtmv/mainpicture5msg.png" alt="mainpicture5msg" border="0" /></a>
 
 <p>While logged in the navigation bar changes. Now you have option to create a New Post of visit your Profile Page.</p>
-<img src="">
+<a href="https://ibb.co/T4dfNt7"><img src="https://i.ibb.co/T4dfNt7/mainpicture8.png" alt="mainpicture8" border="0" /></a>
 
 <p>Profile Page will show your information and also have the ability to edit it. </p>
-<img src="">
+<a href="https://ibb.co/6RXCG9v"><img src="https://i.ibb.co/6RXCG9v/mainpicture9.png" alt="mainpicture9" border="0" /></a>
 
 <p>Editing the profile picture, you have ability to change, username, email, first name and last name. changing password has been turned off.</p>
 <img src="">
