@@ -1,5 +1,5 @@
 <h1> Project 4 - Reddit Style Blog</h1>
-<h2> mockdd <span style="color:red;">">i</span>t</h2>
+<h2> mockddit</h2>
 <p> Blog type application where a registered user can create a new posts, or comment on already existing one.</p>
 <p> Developed using : HTML, CSS, JAVASCRIPT, PYTHON, BOOTSTRAP and DJANGO</p>
 <br>
@@ -7,14 +7,12 @@
 <a href="https://project4-django-blog-x-24e6733e46ab.herokuapp.com/">mockdd <span style="color:red;">">i</span>t on Heroku</a>
 <br>
 <br>
-<p>Link to the GITHUB repository:</p>
-<a href="https://github.com/MikeMaroni9/P4-Reddit-Django">GITHUB</a>
-<br>
-<p>Link to the GITHUB USER Stories:</p>
-<a href="https://github.com/users/MikeMaroni9/projects/4/views/1">User Stories</a>
-<br>
-<br>
+<p>Link to the GITHUB repository: <a href="https://github.com/MikeMaroni9/P4-Reddit-Django">GITHUB</a></p>
 
+<br>
+<p>Link to the GITHUB USER Stories: <a href="https://github.com/users/MikeMaroni9/projects/4/views/1">User Stories</a></p>
+<br>
+<br>
 <h2> The Process of the Web Page</h2>
 <p>Reddit style web page with authentication, ability to create posts, delete posts. Leave comments and like the posts.</p>
 
@@ -91,8 +89,12 @@
 <a href="https://ibb.co/zbNDqd0"><img src="https://i.ibb.co/zbNDqd0/mainpicture16.png" alt="mainpicture16" border="0" /></a>
 <a href="https://ibb.co/YDCHDLX"><img src="https://i.ibb.co/YDCHDLX/mainpicture17.png" alt="mainpicture17" border="0" /></a>
 
+<h2>Database Construct</h2>
+<a href="https://ibb.co/ryGcbwd"><img src="https://i.ibb.co/ryGcbwd/Posts-and-Comments-database-relationship.png" alt="Posts-and-Comments-database-relationship" border="0" /></a>
+<hr>
 
 <h2>Used Materials / References</h2>
+<hr>
 <p>"CI" I Think Therefore I Blog project</p>
 <p>"CI" Hello Django project</p>
 <p>Auto assigning author to the posts : <a href="https://www.youtube.com/watch?v=-s7e_Fy6NRU&t=1573s&ab_channel=CoreySchafer">CoreySchafer</a></p>
@@ -100,9 +102,6 @@
 <p>Profile Page edits : <a href="https://www.youtube.com/watch?v=D9Xd6jribFU&ab_channel=MaxGoodridge">Max Goodridge</a></p>
 
 <p>Google Auth addon: <a href="https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8">AllAuth</a></p>
-
-
-
 
 <h2>Deployment<h2>
 <p>1.Installing gunicorn server to run Django on heroku</p>
@@ -130,8 +129,6 @@
 <a href="https://ibb.co/bmWZc4Q"><img src="https://i.ibb.co/bmWZc4Q/dep11.png" alt="dep11" border="0" /></a>
 <p>Deploying a project on Heroku</p>
 <a href="https://ibb.co/Kj8gPW1"><img src="https://i.ibb.co/Kj8gPW1/dep10.png" alt="dep10" border="0" /></a>
-<p>I have committed all the files and pushed them on to the repository. </p>
-<p>Created requirement file for the dependencies used for the project to run:</p>
 <hr>
 <h2> The Persistent Problems </h2>
 <p>Wanted to include more login functionality, forgot password etc. Couldn't get mail server to work. SendGrid didn't let me access the account. Might be because of the VPN use.</p>
