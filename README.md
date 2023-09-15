@@ -20,7 +20,7 @@
 
 
 <p>Upon opening a page, you are greeted with pre-filled reddit style page. All content is taken from the original reddit page, including the comments and chosen randomly without particular agenda</p>
-<a href="https://ibb.co/1JsMnZB"><img src="https://i.ibb.co/1JsMnZB/mainpicture1.png" alt="mainpicture1" border="0" /></a>
+<img src="https://ibb.co/1JsMnZB">
 
 
 <p>For visitors that are not signed-up and logged in, you are greeted with mockddit logo which acts as a link button to index page, and two buttons on the opposite side. Register and Login</p>
