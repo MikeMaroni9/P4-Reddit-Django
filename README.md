@@ -3,8 +3,8 @@
 <p> Blog type application where a registered user can create a new posts, or comment on already existing one.</p>
 <p> Developed using : HTML, CSS, JAVASCRIPT, PYTHON, BOOTSTRAP and DJANGO</p>
 <br>
-<p>Link to the project on Heroku:</p>
-<a href="https://project4-django-blog-x-24e6733e46ab.herokuapp.com/">mockddit on Heroku</a>
+<p>Link to the project on Heroku: <a href="https://project4-django-blog-x-24e6733e46ab.herokuapp.com/">mockddit on Heroku</a></p>
+
 <br>
 <br>
 <p>Link to the GITHUB repository: <a href="https://github.com/MikeMaroni9/P4-Reddit-Django">GITHUB</a></p>
