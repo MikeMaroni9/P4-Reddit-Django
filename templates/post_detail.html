@@ -14,7 +14,7 @@
             {% if user.id == post.author.id %}
                 
                 <a href="{% url 'editpost' post.pk%}">
-                <button type="button" class="btn btn-light">edit</button> 
+                <button type="button" class="btn btn-light btn-outline-danger">edit</button> 
                 </a>
                 <a href="{% url 'deletepost' post.pk%}"> 
                 <button type="button" class="btn btn-danger">delete</button>
@@ -37,7 +37,7 @@
                 <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="fas fa-heart text-danger"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like "><i class="fas fa-heart text-danger"></i></button>
                     {% else %}
                     <button type="submit" name="blogpost_id" value="{{ post.pk }}" class="btn-like"><i class="far fa-heart text-danger"></i></button>
                     {% endif %}
@@ -58,7 +58,7 @@
         <br>
         <hr>
         <a href="{% url 'newcomment' post.pk %}">
-            <button type="button" class="btn btn-light">Add Comment</button>
+            <button type="button" class="btn btn-light btn-outline-danger">Add Comment</button>
         </a>
         </div>
     </div>

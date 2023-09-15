@@ -30,13 +30,13 @@
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'addpost' %}">
-                <button type="button" class="btn btn-light btn-lg neww">New Post</button>
+                <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
                 </a>
               </li>
               <!-- PROFILE PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'profile' %}">
-                <button type="button" class="btn btn-light btn-lg neww">Profile</button>
+                <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
                 </a>
               </li>
               <!-- LOGOUT PAGE ON NAVBAR-->
@@ -49,12 +49,12 @@
               <!-- REGISTER PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_signup' %}">
-                <button type="button" class="btn btn-light btn-lg">Register</button>
+                <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
                 </a>
               <!-- LOGIN PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_login' %}">
-                <button type="button" class="btn btn-light btn-lg">Login</button>
+                <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
                 </a>
               </li>
               {% endif %}
