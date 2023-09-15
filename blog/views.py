@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.views import generic, View
+from django.contrib.auth.forms import UserChangeForm
 from .models import Post,Comment
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm
+from .forms import CommentForm, EditProfileForm
 
 class Home(ListView):
     model = Post
@@ -78,6 +79,19 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('postdetail', args=[pk]))
 
-#Profile for NavBar
+# NAVBAR Profile
 def profile(request):
     return render(request, 'profile.html')
+
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'edit_profile.html', args)
+

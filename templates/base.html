@@ -33,24 +33,25 @@
                 <button type="button" class="btn btn-light btn-lg neww">New Post</button>
                 </a>
               </li>
-              <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- PROFILE PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'profile' %}">
                 <button type="button" class="btn btn-light btn-lg neww">Profile</button>
                 </a>
               </li>
-              <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- LOGOUT PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">
                 <button type="button" class="btn btn-danger btn-lg">Logout</button>
                 </a>
-                
               </li>
               {% else %}
+              <!-- REGISTER PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_signup' %}">
                 <button type="button" class="btn btn-light btn-lg">Register</button>
                 </a>
+              <!-- LOGIN PAGE ON NAVBAR-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_login' %}">
                 <button type="button" class="btn btn-light btn-lg">Login</button>

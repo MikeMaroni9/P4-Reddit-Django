@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+                    <span class="h4">Edit Profile</span>
+                        <br>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-danger">
+                                Save
+                            </button>
+                        </form>
+                        <br>
+                    </span>
+                    <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -7,17 +7,19 @@
             <div class="card my-3 shadow">
                 <div class="card-body">
                     <span class="h4">Profile Page</span>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-danger">
-                            Edit Profile
-                        </button>
+                    <div class="position-absolute top-0 end-0">
+                        <a href="{% url 'edit_profile' %}">
+                            <button type="submit" class="btn btn-danger">Edit</button>
+                        </a>
+                    </div>
                     </span>
                     <hr>
                     <div class="row">
                         <div class="col-md-8">
-                            <h4>Name: {{ user.username }}</h4>
+                            <h4>Username: {{ user.username }}</h4>
                             <h4>Email: {{ user.email }} </h4>
+                            <h4>First Name: {{ user.first_name }} </h4>
+                            <h4>Last Name: {{ user.last_name }} </h4>
                         </div>
                     </div>
                 </div>
@@ -26,3 +28,5 @@
     </div>
 </div>
 {% endblock %}
+
+
