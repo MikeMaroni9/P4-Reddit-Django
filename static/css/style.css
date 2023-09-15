@@ -3,7 +3,10 @@
     background-color: #7c8893;
 }
 
-body {background-color: #70808e;}
+body {
+    background-color: #70808e;
+}
+
 
 /* NAV BAR STYLE  */
 .navbar-brand {
@@ -41,17 +44,6 @@ a:hover {
     color: #000000;
 }
 
-
-.nav-link {
-    color:#EEA47F;
-}
-
-
-.nav-link:hover { color: #e8bd3b; }
-
-.btn-light {
-
-}
 
 /* Danger buttons color change  */
 .btn-danger {

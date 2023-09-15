@@ -8,9 +8,9 @@
         <div class="container login">
           <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
+                <!--If the user.id matches the logged in user - ABILITY to DELETE posts-->
                 <div class="text-white form-group">
                 <h2>Delete Post</h2>
-
                 <h2>Delete: {{ post.title }} </h2>
                 <form method="POST">
                 {% csrf_token %}

@@ -18,68 +18,71 @@
 
 <body class="d-flex flex-column h-100 main-bg"></body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION BAR -->
 
-    <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'index' %}"><span style="color: white">mockdd<span style="color: red">i</span>t</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <ul class="nav justify-content-center">
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'addpost' %}">
-                <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
-                </a>
-              </li>
-              <!-- PROFILE PAGE ON NAVBAR-->
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'profile' %}">
-                <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
-                </a>
-              </li>
-              <!-- LOGOUT PAGE ON NAVBAR-->
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">
-                <button type="button" class="btn btn-danger btn-lg">Logout</button>
-                </a>
-              </li>
-              {% else %}
-              <!-- REGISTER PAGE ON NAVBAR-->
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}">
-                <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
-                </a>
-              <!-- LOGIN PAGE ON NAVBAR-->
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">
-                <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
-                </a>
-              </li>
-              {% endif %}
-            </ul>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible alert-light fade show ml-5" id="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                {% endfor %}
+<nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
+    <div class="container-fluid">
+      <!--LOGO OF THE PAGE, ALSO WORKS AS A BACK TO HOME REDIRECT BUTTON-->
+      <a class="navbar-brand" href="{% url 'index' %}"><span style="color: white">mockdd<span style="color: red">i</span>t</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <ul class="nav justify-content-center">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <!--Ability to create a new post for the logged in user-->
+            <a class="nav-link" href="{% url 'addpost' %}">
+            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
+            </a>
+          </li>
+          <!-- PROFILE PAGE ON NAVBAR-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile' %}">
+            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
+            </a>
+          </li>
+          <!-- LOGOUT PAGE ON NAVBAR-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_logout' %}">
+            <button type="button" class="btn btn-danger btn-lg">Logout</button>
+            </a>
+          </li>
+          {% else %}
+          <!-- REGISTER PAGE ON NAVBAR-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_signup' %}">
+            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
+            </a>
+          <!-- LOGIN PAGE ON NAVBAR-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}">
+            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <!--MSG Displayed after succesful LOGIN or LOGOUT function-->
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible alert-light fade show ml-5" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            {% endfor %}
         </div>
     </div>
-    <main class="flex-shrink-0 main-bg">
-        {% block content %}
+</div>
+<main class="flex-shrink-0 main-bg">
+    {% block content %}
 
-        <!-- Content Goes here -->
+    <!-- Content Goes here -->
 
-        {% endblock content %}
-    </main>
+    {% endblock content %}
+</main>
     <!-- Footer -->
 <footer class="footer mt-auto py-3 dark-bg">
   <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a><it</p></strong>

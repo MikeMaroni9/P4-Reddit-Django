@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<!--If the user is authenticated and has the same user.id as the post autor - ability to edit the post-->
+
 {% if user.is_authenticated %}
-    {% if user.id == post.author.id %}
+    {% if user.id == comment.author.id %}
     <div class="form-group">
         <div class="container login">
           <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
                 <div class="text-white form-group">
-                <h2> EDIT POST</h2>
+                <h2> EDIT COMMENT</h2>
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p}}
@@ -21,7 +21,7 @@
         </div>
     </div>
     {% else %}
-        Please LOGIN to edit the post !
+        Please LOGIN to edit the comment !
     {% endif %}
 
 

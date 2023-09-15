@@ -10,8 +10,8 @@
 <div class="container login">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
+      <!--Sign In message that has a link to the sign up section in case you don't have an account-->
       <h3>{% trans "Sign In" %}</h3>
-
       <p>{% blocktrans %}Welcome back to the <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a><it</p></strong>. If you
         have not created an account yet, then <a class="link" href="{{ signup_url }}"><strong>sign up</strong></a>
         first.{% endblocktrans %}</p>
@@ -19,6 +19,7 @@
   </div>
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
+      <!--THE LOG IN FORM-->
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
@@ -26,6 +27,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-signup right btn-light" type="submit">{% trans "Sign In" %}</button>
+        <!--ABILITY TO LOG IN VIA GOOGLE-->
         <button type="button" class="btn btn-danger" class="socialaccount_providers text-white">
           {% include "socialaccount/snippets/provider_list.html" with process="login" %}
           </button>
@@ -35,11 +37,4 @@
   </div>
 </div>
 <div>
-  
-
-  
-  
-  
-  
-  
 {% endblock %}

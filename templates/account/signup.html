@@ -8,14 +8,15 @@
 <div class="container text-white">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
+            <!--SIGN UP FUNCTION, with the link and ability to log in if user already has an account-->
             <h3>{% trans "Sign Up" %}</h3>
-
             <p>{% blocktrans %}Welcome back to the mockddit. Do you already have an account? Then please <a
                     class="link" href="{{ login_url }}"><strong>sign in</strong></a> instead.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
+            <!--Form asking user to input his username and password, email requirements are set to false-->
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form.as_p }}

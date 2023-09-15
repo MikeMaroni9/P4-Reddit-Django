@@ -7,11 +7,17 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .forms import CommentForm, EditProfileForm
 
+"""
+Main view of the page, displays index page and paginates the pages if posts are more than 6
+"""
 class Home(ListView):
     model = Post
     template_name = 'index.html'
     paginate_by = 6
 
+"""
+Detailed view of each individual post, displays a post, author, date and likes for the post. Also includes comment section, where logged in users can leave their comments.  
+"""
 class PostDetail(DetailView):
     model = Post
     template_name = 'post_detail.html'
@@ -36,7 +42,9 @@ class PostDetail(DetailView):
             },
         )
 
-
+"""
+View for creating a New Post. Logged in users have the ability to create a new post from the nav bar or admin section for admins.
+"""
 class AddPost(CreateView):
     model = Post
     template_name = 'add_post.html'
@@ -46,6 +54,9 @@ class AddPost(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+"""
+View for adding a comments to the selected post. User ID is automatically applied and displayed, so does the comment is placed underneath the correct post.
+"""
 class AddComment(CreateView):
     model = Comment
     template_name = 'add_comment.html'
@@ -58,16 +69,25 @@ class AddComment(CreateView):
         return super().form_valid(form)
 
 
+"""
+For a logged in authorized user that matches the author of the post - Ability to  EDIT the POST.
+"""
 class EditPost (UpdateView):
     model = Post
     template_name = "edit_post.html"
     fields = ['title', 'content']
 
+"""
+For a logged in authorized user that matches the author of the post - Ability to  DELETE the POST.
+"""
 class DeletePost (DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy('index')
-    
+
+"""
+Ability for the logged in user to leave a like under a POST.
+"""
 class PostLike(View):
     
     def post(self, request, pk, *args, **kwargs):
@@ -79,7 +99,9 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('postdetail', args=[pk]))
 
-# NAVBAR Profile
+"""
+Profile page added to the navigation bar, displayed only for the logged in user. Ability to see user details, as well as edit them. Username, Email, First Name, Last Name.
+"""
 def profile(request):
     return render(request, 'profile.html')
 
