@@ -48,57 +48,49 @@
 <a href="https://ibb.co/6RXCG9v"><img src="https://i.ibb.co/6RXCG9v/mainpicture9.png" alt="mainpicture9" border="0" /></a>
 
 <p>Editing the profile picture, you have ability to change, username, email, first name and last name. changing password has been turned off.</p>
-<img src="">
+<a href="https://ibb.co/X2Y9v1y"><img src="https://i.ibb.co/X2Y9v1y/editprofile.png" alt="editprofile" border="0"></a>
 
 <p>New Post : You are greeted with a simple form to input Title and Content of your post. Username is asigned automatically for the logged in user. {% if authenticated %} has been added to allow only logged in User to create a new posts. Added is also Bootsrap MSG that can be dismissed, reminding users to be polite and follow the mockddits rules.</p>
-<img src="">
+<a href="https://ibb.co/fk8sqr7"><img src="https://i.ibb.co/fk8sqr7/newpost.png" alt="newpost" border="0"></a>
 
 <p>Newests POSTS are automatically showed at the top of the page.</p>
-<img src="">
+<a href="https://ibb.co/Kxx00t6"><img src="https://i.ibb.co/Kxx00t6/mainpicture10.png" alt="mainpicture10" border="0" /></a>
 
 <p>Author of the post has the ability to edit or to delete the post. User has to be logged in and user.id has to match author.id</p>
-<img src="">
+<a href="https://ibb.co/3mxQgRy"><img src="https://i.ibb.co/3mxQgRy/mainpicture11.png" alt="mainpicture11" border="0" /></a>
 
 <p>As a signed in user, you can like the post, increasing the like count and add comments</p>
-<img src="">
+<a href="https://ibb.co/56cWNcL"><img src="https://i.ibb.co/56cWNcL/mainpicture12.png" alt="mainpicture12" border="0" /></a>
 
 <p>Adding a comment takes you to new comments page, user id and current post is asigned automatically, leaving you with only option to leave a comment.</p>
-<img src="">
+<a href="https://ibb.co/bHjCs39"><img src="https://i.ibb.co/bHjCs39/mainpicture13.png" alt="mainpicture13" border="0" /></a>
 
 <p>Maximum posts per page are 6, automatically paginating older post to the next page.</p>
-<img src="">
-
-<p></p>
-<img src="">
-
-<p></p>
-<img src="">
-
-<p></p>
-<img src="">
-
-
-
+<a href="https://ibb.co/MSrKpcx"><img src="https://i.ibb.co/MSrKpcx/mainpicture14.png" alt="mainpicture14" border="0" /></a>
 
 <h2>Tests</h2>
 <hr>
 
 <p>Am I responsive Test:</p>
-<img src="../P4-Reddit-Django/media/dep11.png">
+!!!!!!!!!!!!!!!! HAVE TO ADD
 
 <p>Lighthouse Test:</p>
-<img src="">
+<a href="https://ibb.co/T1C5tg4"><img src="https://i.ibb.co/T1C5tg4/lighthouse.png" alt="lighthouse" border="0" /></a>
 
 <p>WRC CSS Validator:</p>
-<img src="">
+<a href="https://ibb.co/rmrxXx7"><img src="https://i.ibb.co/rmrxXx7/css-validator.png" alt="css-validator" border="0" /></a>
 
 <p>CI Python Linter</p>
-<img src="">
+<a href="https://ibb.co/4ZvGvvC"><img src="https://i.ibb.co/4ZvGvvC/linter1.png" alt="linter1" border="0" /></a>
+<a href="https://ibb.co/G7SC7m7"><img src="https://i.ibb.co/G7SC7m7/linter2.png" alt="linter2" border="0" /></a>
+<a href="https://ibb.co/5r4ZqDB"><img src="https://i.ibb.co/5r4ZqDB/linter3.png" alt="linter3" border="0" /></a>
+<a href="https://ibb.co/Zcp6d96"><img src="https://i.ibb.co/Zcp6d96/linter4.png" alt="linter4" border="0" /></a>
 
 <p>Automatic Python Tests with Comments : </p>
-<img src="">
-<img src="">
-<img src="">
+<a href="https://ibb.co/SNbpmxx"><img src="https://i.ibb.co/SNbpmxx/mainpicture15.png" alt="mainpicture15" border="0" /></a>
+<a href="https://ibb.co/zbNDqd0"><img src="https://i.ibb.co/zbNDqd0/mainpicture16.png" alt="mainpicture16" border="0" /></a>
+<a href="https://ibb.co/YDCHDLX"><img src="https://i.ibb.co/YDCHDLX/mainpicture17.png" alt="mainpicture17" border="0" /></a>
+
 
 <h2>Used Materials / References</h2>
 <p>"CI" I Think Therefore I Blog project</p>
@@ -118,7 +110,7 @@
 <p>2.Install psycopg2 adapted for PostgreSQL database</p>
 <img src="">
 <p>Creating a Requirements.txt file for necessery dependencies</p>
-<img src="">
+<a href="https://ibb.co/8zTn72y"><img src="https://i.ibb.co/8zTn72y/mainpicture18.png" alt="mainpicture18" border="0" /></a>
 <p>Creatign a new project in Django</p>
 <img src="">
 <p>Creating the blogg app</p>
