@@ -4,7 +4,7 @@
 <p> Developed using : HTML, CSS, JAVASCRIPT, PYTHON, BOOTSTRAP and DJANGO</p>
 <br>
 <p>Link to the project on Heroku:</p>
-<a href="https://project4-django-blog-x-24e6733e46ab.herokuapp.com/">mockdd <span style="color:red;">">i</span>t on Heroku</a>
+<a href="https://project4-django-blog-x-24e6733e46ab.herokuapp.com/">mockddit on Heroku</a>
 <br>
 <br>
 <p>Link to the GITHUB repository: <a href="https://github.com/MikeMaroni9/P4-Reddit-Django">GITHUB</a></p>
@@ -68,9 +68,6 @@
 
 <h2>Tests</h2>
 <hr>
-
-<p>Am I responsive Test:</p>
-!!!!!!!!!!!!!!!! HAVE TO ADD
 
 <p>Lighthouse Test:</p>
 <a href="https://ibb.co/T1C5tg4"><img src="https://i.ibb.co/T1C5tg4/lighthouse.png" alt="lighthouse" border="0" /></a>
