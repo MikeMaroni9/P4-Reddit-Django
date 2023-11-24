@@ -44,3 +44,4 @@ class EditProfileFormTestCase(TestCase):
         self.assertEqual(form.Meta.fields, (
                          'username', 'email', 'first_name', 'last_name'))
 
+
