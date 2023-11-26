@@ -85,6 +85,9 @@ A total of 100% was covered.
 <br>
 <p>Link to the GITHUB USER Stories: <a href="https://github.com/users/MikeMaroni9/projects/4/views/1">User Stories</a></p>
 <br>
+<p>Link to the Milestones : <a href="https://github.com/MikeMaroni9/P4-Reddit-Style-Blog-Django/milestones">Milestones</a></p>
+<br>
+<p>Please use the links provided for user stories and milestones due to the fact that there are first iteration of the project and the second one. The user stories remain on the first iteartion of the project but the project itself is in different repository. As I had problems with github before in fear of ruining the project I don't move them. 
 <br>
 <h2> The Process of the Web Page</h2>
 <p>Reddit style web page with authentication, ability to create posts, delete posts. Leave comments and like the posts.</p>
