@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body class="d-flex flex-column h-100 main-bg"></body>
+<body class="d-flex flex-column h-100 main-bg">
 
     <!-- NAVIGATION BAR -->
 
@@ -34,8 +34,7 @@
           <li class="nav-item">
             <!--Ability to create a new post for the logged in user-->
             <a class="nav-link" href="{% url 'addpost' %}">
-              <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
-            </a>
+            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button> 
           </li>
           <!-- PROFILE PAGE ON NAVBAR-->
           <li class="nav-item">
@@ -77,17 +76,18 @@
             {% endfor %}
         </div>
     </div>
-</div>
-<main class="flex-shrink-0 main-bg">
-    {% block content %}
+  </div>
+  <main class="flex-shrink-0 main-bg">
+      {% block content %}
 
-    <!-- Content Goes here -->
+      <!-- Content Goes here -->
 
-    {% endblock content %}
-</main>
+      {% endblock content %}
+  </main>
+</body>
     <!-- Footer -->
 <footer class="footer mt-auto py-3 dark-bg">
-  <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a><it</p></strong>
+  <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a></p></strong>
 </footer>
 <script>
   setTimeout(function () {
