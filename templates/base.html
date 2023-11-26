@@ -39,26 +39,22 @@
           <!-- PROFILE PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'profile' %}">
-              <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
-            </a>
+            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
           </li>
           <!-- LOGOUT PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_logout' %}">
             <button type="button" class="btn btn-danger btn-lg">Logout</button>
-            </a>
           </li>
           {% else %}
           <!-- REGISTER PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_signup' %}">
-              <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
-            </a>
+            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
           <!-- LOGIN PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_login' %}">
-              <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
-            </a>
+            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
           </li>
           {% endif %}
         </ul>
@@ -84,18 +80,16 @@
 
       {% endblock content %}
   </main>
-</body>
     <!-- Footer -->
-<footer class="footer mt-auto py-3 dark-bg">
-  <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></a></p></strong>
-</footer>
-<script>
-  setTimeout(function () {
-      let messages = document.getElementById('msg');
-      let alert = new bootstrap.Alert(messages);
-      alert.close();
-  }, 2500);
-</script>
+  <footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center text-white">Project 4 : <span style="color: white"><strong>>mockdd<span style="color: red">i</span>t</strong</span></a>
+  </footer>
+  <script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 2500);
+  </script>
 </body>
-
 </html>
