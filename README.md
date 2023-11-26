@@ -83,11 +83,19 @@ A total of 100% was covered.
 <br>
 <p>Link to the GITHUB repository: <a href="https://github.com/MikeMaroni9/P4-Reddit-Django">GITHUB</a></p>
 <br>
-<p>Link to the GITHUB USER Stories: <a href="https://github.com/users/MikeMaroni9/projects/4/views/1">User Stories</a></p>
+<p>Link to the GITHUB USER Stories: <a href="https://github.com/users/MikeMaroni9/projects/6">User Stories</a></p>
 <br>
-<p>Link to the Milestones : <a href="https://github.com/MikeMaroni9/P4-Reddit-Style-Blog-Django/milestones">Milestones</a></p>
+<p>Link to the Milestones : <a href="https://github.com/MikeMaroni9/P4-Reddit-Django/milestones">Milestones</a></p>
+
+<p>These User Stories with acceptance criteria and Milestones should be the correct ones.</p>
+<p>This is the second iteration of the project and until now I still used original userstories and milestones from first iteration, now I tried to carry everything over to the current file. It should be up to date and correct but in case I have made an error, here's the original updated list.
+
+
 <br>
-<p>Please use the links provided for user stories and milestones due to the fact that there are first iteration of the project and the second one. The user stories remain on the first iteartion of the project but the project itself is in different repository. As I had problems with github before in fear of ruining the project I don't move them. 
+<p>GITHUB USER Stories 1st Iteration: <a href="https://github.com/users/MikeMaroni9/projects/4/views/1">User Stories</a></p>
+<br>
+<p>Link to the Milestones 1st Iteration: <a href="https://github.com/MikeMaroni9/P4-Reddit-Style-Blog-Django/milestones">Milestones</a></p>
+<br>
 <br>
 <h2> The Process of the Web Page</h2>
 <p>Reddit style web page with authentication, ability to create posts, delete posts. Leave comments and like the posts.</p>
