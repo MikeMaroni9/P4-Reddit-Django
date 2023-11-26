@@ -1,6 +1,7 @@
 from django.test import TestCase
 from . forms import CommentForm, EditProfileForm
 
+
 class TestCommentForm(TestCase):
     # Test assuming the Comment form is valid
     def test_comment_form_is_valid(self):
@@ -23,6 +24,7 @@ class TestCommentForm(TestCase):
         self.assertIn('body', form.fields)
         self.assertEqual(len(form.fields), 1)
 
+
 class EditProfileFormTestCase(TestCase):
 
     def test_profile_edit_form(self):
@@ -43,5 +45,3 @@ class EditProfileFormTestCase(TestCase):
         #  error will be shows if someone alters the forms model later on.
         self.assertEqual(form.Meta.fields, (
                          'username', 'email', 'first_name', 'last_name'))
-
-

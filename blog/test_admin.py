@@ -1,7 +1,9 @@
+
 from django.urls import reverse
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from blog.models import Post, Comment
+
 
 class CommentAdminTest(TestCase):
     # Test setUp
@@ -45,5 +47,4 @@ class CommentAdminTest(TestCase):
 
         # Check if update was applied
         self.assertEqual(Comment.objects.filter(approved=True).count(), 1)
-
 

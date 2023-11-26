@@ -40,6 +40,40 @@ Instead of adding a general overview saying that everything works fine, consider
 
 Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 
+<h2>Testing</h2>
+<hr>
+I created 3 individual files = test_models.py, test_views.py and test_forms.py that covered most of the testing process and also created test_admin file to fill out the necessary coverage to get it to 100%.
+<br> 
+<br> 
+For testing purposes I have installed the Coverage.py as a tool for measuring code testing coverage of Python program. 
+<br>
+<br>
+<a href="https://ibb.co/kcs4Wqz"><img src="https://i.ibb.co/DKH9Swm/1-install-coverage.png" alt="1-install-coverage" border="0"></a>
+
+I ran the program via the code: 
+<br>
+<br>
+<a href="https://ibb.co/3ydnByx"><img src="https://i.ibb.co/KjhJFjt/2-coverage-test-run.png" alt="2-coverage-test-run" border="0"></a>
+<br>
+
+The code ran 22 tests in 13.534 sec and found no errors.
+<br>
+And after the test has executed I ran the “coverage report” command to see the total coverage of the unit test created. 
+<br>
+
+<a href="https://ibb.co/42CPJSq"><img src="https://i.ibb.co/FXcgnYr/3-coverage-report.png" alt="3-coverage-report" border="0"></a>
+<br>
+
+All test have comments attached to them explaining what each of the test is testing for.
+<br>
+
+A total of 100% was covered. 
+<hr>
+
+
+
+
+
 <h1> Project 4 - Reddit Style Blog</h1>
 <h2> mockddit</h2>
 <p> Blog type application where a registered user can create a new posts, or comment on already existing one.</p>
@@ -220,7 +254,6 @@ Listing the posts made by the user on the profile page could have added some dep
 <p>Wanted to include more login functionality, forgot password etc. Couldn't get mail server to work. SendGrid didn't let me access the account. Might be because of the VPN use.</p>
 <p>Couldn't figure out how to include more comments functionality, to edit and delete them.</p>
 <br>
-
 
 
 
