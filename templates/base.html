@@ -1,5 +1,7 @@
 {% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title >mockddit</title>
 
@@ -7,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -20,7 +22,7 @@
 
     <!-- NAVIGATION BAR -->
 
-<nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
+  <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
     <div class="container-fluid">
       <!--LOGO OF THE PAGE, ALSO WORKS AS A BACK TO HOME REDIRECT BUTTON-->
       <a class="navbar-brand" href="{% url 'index' %}"><span style="color: white">mockdd<span style="color: red">i</span>t</span></a>
@@ -32,13 +34,13 @@
           <li class="nav-item">
             <!--Ability to create a new post for the logged in user-->
             <a class="nav-link" href="{% url 'addpost' %}">
-            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
+              <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
             </a>
           </li>
           <!-- PROFILE PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'profile' %}">
-            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
+              <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
             </a>
           </li>
           <!-- LOGOUT PAGE ON NAVBAR-->
@@ -51,12 +53,12 @@
           <!-- REGISTER PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_signup' %}">
-            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
+              <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
             </a>
           <!-- LOGIN PAGE ON NAVBAR-->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_login' %}">
-            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
+              <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
             </a>
           </li>
           {% endif %}
