@@ -2,100 +2,152 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title >mockddit</title>
+  <head>
+    <title>mockddit</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
 
-<body class="d-flex flex-column min-vh-100">
-
+  <body class="d-flex flex-column min-vh-100">
     <!-- NAVIGATION BAR -->
 
-  <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
-    <div class="container-fluid">
-      <!--LOGO OF THE PAGE, ALSO WORKS AS A BACK TO HOME REDIRECT BUTTON-->
-      <a class="navbar-brand" href="{% url 'index' %}"><span style="color: white">mockdd<span style="color: red">i</span>t</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg bs-dark-bg-subtle pt-3 pb-5">
+      <div class="container-fluid">
+        <!--LOGO OF THE PAGE, ALSO WORKS AS A BACK TO HOME REDIRECT BUTTON-->
+        <a class="navbar-brand" href="{% url 'index' %}"
+          ><span style="color: white"
+            >mockdd<span style="color: red">i</span>t</span
+          ></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <ul class="nav justify-content-center">
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <!--Ability to create a new post for the logged in user-->
-            <a class="nav-link" href="{% url 'addpost' %}">
-            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">New Post</button>
+            <!-- Ability to create a new post for the logged-in user -->
+            <a href="{% url 'addpost' %}" class="nav-link">
+              <span class="btn btn-light btn-lg neww btn-outline-danger">
+                New Post
+              </span>
             </a>
           </li>
           <!-- PROFILE PAGE ON NAVBAR-->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'profile' %}">
-            <button type="button" class="btn btn-light btn-lg neww btn-outline-danger">Profile</button>
+            <a href="{% url 'profile' %}" class="nav-link">
+              <span class="btn btn-light btn-lg neww btn-outline-danger">
+                Profile
+              </span>
             </a>
           </li>
           <!-- LOGOUT PAGE ON NAVBAR-->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">
-            <button type="button" class="btn btn-danger btn-lg">Logout</button>
+            <a href="{% url 'account_logout' %}" class="nav-link">
+              <span class="btn btn-danger btn-lg"> Logout </span>
             </a>
           </li>
           {% else %}
           <!-- REGISTER PAGE ON NAVBAR-->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">
-            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Register</button>
+            <a href="{% url 'account_signup' %}" class="nav-link">
+              <span class="btn btn-light btn-lg btn-outline-danger">
+                Register
+              </span>
             </a>
-          <!-- LOGIN PAGE ON NAVBAR-->
+            <!-- LOGIN PAGE ON NAVBAR-->
+          </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">
-            <button type="button" class="btn btn-light btn-lg btn-outline-danger">Login</button>
+            <a href="{% url 'account_login' %}" class="nav-link">
+              <span class="btn btn-light btn-lg btn-outline-danger">
+                Login
+              </span>
             </a>
           </li>
           {% endif %}
         </ul>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <!--MSG Displayed after succesful LOGIN or LOGOUT function-->
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <!--MSG Displayed after succesful LOGIN or LOGOUT function-->
         <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible alert-light fade show ml-5" id="msg" role="alert">
-                {{ message | safe }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
+          {% for message in messages %}
+          <div
+            class="alert {{ message.tags }} alert-dismissible alert-light fade show ml-5"
+            id="msg"
+            role="alert"
+          >
+            {{ message | safe }}
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
-</div>
-<main class="flex-shrink-0 main-bg">
-    {% block content %}
+    <main class="flex-shrink-0 main-bg">
+      {% block content %}
 
-    <!-- Content Goes here -->
+      <!-- Content Goes here -->
 
-    {% endblock content %}
-</main>
+      {% endblock content %}
+    </main>
     <!-- Footer -->
-  <footer class="footer mt-auto py-3 dark-bg">
-    <p class="m-0 text-center text-white">Project 4 : <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></strong>
-  </footer>
-<script>
-  setTimeout(function () {
-      let messages = document.getElementById('msg');
-      let alert = new bootstrap.Alert(messages);
-      alert.close();
-  }, 2500);
-</script>
-</body>
+    <footer class="footer mt-auto py-3 dark-bg">
+      <p class="m-0 text-center text-white">
+        Project 4 :
+        <strong
+          ><span style="color: white"
+            >mockdd<span style="color: red">i</span>t</span
+          ></strong
+        >
+      </p>
+    </footer>
 
+    <script>
+      setTimeout(function () {
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }, 2500);
+    </script>
+  </body>
 </html>
