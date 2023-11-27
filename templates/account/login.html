@@ -10,7 +10,7 @@
 <div class="container login">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <!--Sign In message that has a link to the sign-up section in case you don't have an account-->
+      <!--Sign In message that has a link to the sign up section in case you don't have an account-->
       <h3>{% trans "Sign In" %}</h3>
       <p>{% blocktrans %}Welcome back to the <strong><span style="color: white">mockdd<span style="color: red">i</span>t</span></strong>{% endblocktrans %}</p>. If you
         have not created an account yet, then <a class="link" href="{{ signup_url }}"><strong>sign up</strong></a>
@@ -28,13 +28,13 @@
         {% endif %}
         <button class="btn btn-signup right btn-light" type="submit">{% trans "Sign In" %}</button>
         <!--ABILITY TO LOG IN VIA GOOGLE-->
-        <button type="button" class="btn btn-danger socialaccount_providers text-white">
+        <button type="button" class="btn btn-danger" class="socialaccount_providers text-white">
           {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-        </button>
-        {% include "socialaccount/snippets/login_extra.html" %}
+          </button>
+          {% include "socialaccount/snippets/login_extra.html" %}
       </form>
     </div>
   </div>
 </div>
-</div>
+<div>
 {% endblock %}
