@@ -37,6 +37,7 @@ class PostDetail(DetailView):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
+        post_filter = post.get_post_filter_display()
         return render(
             request,
             "post_detail.html",
@@ -46,6 +47,7 @@ class PostDetail(DetailView):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
+                "post_filter": post_filter,
             },
         )
 
@@ -59,7 +61,7 @@ View for creating a New Post. Logged in users have the ability to:
 class AddPost(CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = 'title', 'content',
+    fields = 'title', 'content', 'post_filter', 
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -94,7 +96,7 @@ Ability to  EDIT the POST.
 class EditPost (UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'post_filter',]
 
 
 """

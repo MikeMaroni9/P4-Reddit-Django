@@ -26,6 +26,7 @@
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle text-dark"><span class="text-white">Post By :</span> <strong>{{ post.author }}</strong></p>
         <p class="post-subtitle"><small>{{ post.created_on }}</small></p>
+        <p class="post-subtitle text-dark"><span class="text-white">Category :</span> <strong>{{ post_filter }}</strong></p>
         <a href="{% url 'index' %}" class="btn btn-danger" role="button">
             Back
         </a>

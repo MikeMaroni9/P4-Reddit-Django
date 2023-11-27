@@ -16,6 +16,8 @@
                                 <p class="image-flash"> </p>
                                 <p class="card-text text-muted h6"><strong>Author: {{ post.author }}</strong>  |  <small>{{ post.created_on}}</small></p>
                                 <hr>
+                                <p class="card-text text-muted h6"><strong>Category: {{ post_filter }}</strong>
+                                <hr>
                                 <p class="card-text postcontent">{{ post.content | striptags | truncatechars:200 }}</p>
                                 <br>    
                                 <p><i class="far fa-heart text-danger"></i>{{ post.number_of_likes }}</p>
