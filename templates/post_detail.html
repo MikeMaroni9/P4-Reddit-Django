@@ -78,17 +78,23 @@
             {% for comment in comments %}
             <div class="comments" style="padding: 10px;">
                 <p class="font-weight-bold">
-                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                     <span class="text-danger"><strong>{{ comment.name }}</strong></span>
-                    <span class=" text-muted font-weight-normal">
-                        <!-- The comment's created date goes here -->
+                    <span class="text-muted font-weight-normal">
                         {{ comment.created_on }}
                     </span> wrote:
                 </p>
-                <!-- The body of the comment goes before the | -->
                 {{ comment.body | linebreaks }}
+                {% if user.is_authenticated and user.id == comment.author.id %}
+                    <div class="edit-delete-buttons">
+                        <a href="{% url 'edit_comment' comment.post.pk comment.pk %}">
+                            <button type="button" class="btn btn-light btn-outline-danger">Edit</button>
+                        </a>
+                        <a href="{% url 'delete_comment' comment.post.pk comment.pk %}">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </div>
+                {% endif %}
             </div>
-            <!-- Our for loop ends here -->
             {% endfor %}
         </div>
     </div>

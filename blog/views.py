@@ -61,7 +61,7 @@ View for creating a New Post. Logged in users have the ability to:
 class AddPost(CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = 'title', 'content', 'post_filter', 
+    fields = 'title', 'content', 'post_filter',
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -150,3 +150,20 @@ def edit_profile(request):
         form = EditProfileForm(instance=request.user)
         args = {'form': form}
         return render(request, 'edit_profile.html', args)
+
+
+class EditComment(UpdateView):
+    model = Comment
+    template_name = 'edit_comment.html'
+    form_class = CommentForm
+
+    def get_success_url(self):
+        return reverse_lazy('postdetail', args=[self.object.post.id])
+
+
+class DeleteComment(DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+
+    def get_success_url(self):
+        return reverse_lazy('postdetail', args=[self.object.post.id])
