@@ -5,8 +5,8 @@
 <div class="container text-white">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <!--Form to ADD New Comment, user ID is fetched automatically and so is the int:pk of the current post and will be automatically asigned ot the comment-->
-            <h2 class=" mb-4">New Comment</h2>
+            <!--Form to ADD New Comment, user ID is fetched automatically and so is the int:pk of the current post and will be automatically assigned to the comment-->
+            <h2 class="mb-4">New Comment</h2>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -16,7 +16,7 @@
             </form>
             <!--Custom message to be polite and respect the blog rules. Dismissable with an X.-->
             <div class="alert alert-dark mt-3 text-center alert-dismissible fade show" role="alert">
-                <strong>Please be polite and follow the <span class="text-white"> mockdd<span class="text-danger">i</span>t</strong><span> rules!</strong>
+                <strong>Please be polite and follow the <span class="text-white"> mockdd<span class="text-danger">i</span>t</span> rules!</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
