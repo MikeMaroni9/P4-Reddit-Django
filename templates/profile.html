@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Profile Page{% endblock %}
 {% block content %}
-<!-- Profile View in the NAVBAR -->
+<!--Profile View in the NAVBAR-->
 <div class="container">
     <div class="row mt-5 pt-3">
         <div class="col-md-6 offset-md-3">
@@ -9,8 +9,11 @@
                 <div class="card-body">
                     <span class="h4">Profile Page</span>
                     <div class="position-absolute top-0 end-0">
-                        <a href="{% url 'edit_profile' %}" class="btn btn-danger">Edit</a>
+                        <a href="{% url 'edit_profile' %}">
+                            <button type="submit" class="btn btn-danger">Edit</button>
+                        </a>
                     </div>
+                    </span>
                     <hr>
                     <div class="row">
                         <div class="col-md-8">
@@ -20,6 +23,15 @@
                             <h4>Last Name: {{ user.last_name }} </h4>
                         </div>
                     </div>
+                <hr />
+                <h4>User's Posts:</h4>
+                <ul>
+                    {% for post in user.blog_posts.all %}
+                    <li>
+                        <a href="{% url 'postdetail' post.pk %}"> {{ post.title }} </a>
+                    </li>
+                    {% endfor %}
+                </ul>
                 </div>
             </div>
         </div>
