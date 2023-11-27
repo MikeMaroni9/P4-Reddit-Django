@@ -23,6 +23,15 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+    post_filter = models.CharField(max_length=32, choices=post_filter_choices, default='Life')
+
+    post_filter_choices = [
+        ('Life', 'Life'),
+        ('Technology', 'Technology'),
+        ('Advice', 'Advice'),
+        ('Love', 'Love'),
+        ('Work', 'Work'),
+    ]
 
     class Meta:
         ordering = ['-created_on']
