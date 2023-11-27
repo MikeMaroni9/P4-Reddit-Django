@@ -17,6 +17,10 @@ Unfortunately this second submission failed, leaving me with the final attempt t
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/</ul>
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/detail/48</ul>
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/accounts/signup/</ul>
+
+Fixed most of the validator errors, only left with few. Not reallt an errors as suggestions how to better write and not sute Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
+
+
 3) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 4) The use of Agile has been good here, but there is a distinct lack of user acceptance criteria, labels for prioritization, and milestones to map sprints and epics.
 
