@@ -11,14 +11,33 @@ Unfortunately this second submission failed, leaving me with the final attempt t
 <p>Most of the project passed the criteria so I focused only on improving the topics that were hightlighted to me. Without changing the core of the project.</p>
 <p>Here's the list of comments with my solutions added underneath. </p>
 <hr>
+<br>
 
 1) Acceptable use of Agile software developement tools, with scope for improvement with documentation of sprints and milestones
+
+<br>
+<br>
+The USER STORIES have been update, missing ones added. They have always been in the project but wasn't defined as such. Milestones created for Interations and user stories divided per subject.
+<br>
+<br>
+<a href="https://ibb.co/wzxzVYw"><img src="https://i.ibb.co/Kr3rdmL/1-milestones.png" alt="1-milestones" border="0"></a>
+<br>
+Acceptance Criteria added to all User Stories.
+<br>
+<a href="https://ibb.co/0hRJMXj"><img src="https://i.ibb.co/RzkH0Sp/2-Acceptance-Criteria.png" alt="2-Acceptance-Criteria" border="0"></a>
+
+<br>
+<br>
+
 2) Some HTML Validation errors seen on :
+<br>
+
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/</ul>
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/detail/48</ul>
    <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/accounts/signup/</ul>
 
-Fixed most of the validator errors, only left with few. Not reallt an errors as suggestions how to better write and not sute Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
+
+Fixed most of the validator errors, only left with few. Not really an errors as suggestions how to better write and not use Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
 
 
 3) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
@@ -27,29 +46,30 @@ Fixed most of the validator errors, only left with few. Not reallt an errors as 
 Listing all posts in the profile menu added with links taking each posts to each own detail view. 
 <br>
 <a href="https://ibb.co/V2tQLc3"><img src="https://i.ibb.co/D5t81HL/Profile-Page-Update.png" alt="Profile-Page-Update" border="0"></a>
+<br>
+Category Selection added when creating a new post.
+<br>
+<a href="https://ibb.co/HTLqk0w"><img src="https://i.ibb.co/xqK6Ry9/category-added-for-new-posts.png" alt="category-added-for-new-posts" border="0"></a>
+<br>
+Category can be seen by each individual post in Index html
+<br>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/LpRbdsh/post-category.png" alt="post-category" border="0"></a>
+<br>
+And in post detail view upon opening the post
+<br>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/xzKYNc6/post-category-2.png" alt="post-category-2" border="0"></a>
+<br>
+Achieved by adding Post Filter option to the Post models class, with multiple selection filter.
+<br>
+<a href="https://ibb.co/x3G4xgN"><img src="https://i.ibb.co/4JMQhSH/newnew.png" alt="newnew" border="0"></a>
+<br>
 
-
-4) The use of Agile has been good here, but there is a distinct lack of user acceptance criteria, labels for prioritization, and milestones to map sprints and epics.
 
 LO4 - Create automated tests for a Full-Stack Web application using an MVC framework and related contemporary technologies:
 
 5) 4.1  No  Minimal evidence of testing within the project
 6) 4.2  No  Minimal evidence of testing within the project
 7) 4.3  No  Minimal evidence of testing within the project
-
-There needs to be objective evidence provided for the testing performed here. 
-Consider adding six main sections with screenshots to the testing:
-1.Manual testing of each section of the site (such as buttons, links etc)
-2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
-3.Code validation (CSS/HTML/JS using online tools like <https://jigsaw.w3.org/css-validator/> and JSHint) 
-4.Testing of all user stories/features 
-5.Documentation of any bugs encountered and their resolution steps
-6.Documentation of any open bugs Ideally, test cases should focus on each individual section of every page on the website. Each test case should be specific, objective, step-wise replicable. 
-
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element on the page (ie. buttons, input boxes, navigation links etc) by testing them in their happy flow and also the bad/exception flow, mentioning the expected and the observed results, and drawing a parallel between them. Consider using the following format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
-
-
-Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 
 <h2>Testing</h2>
 <hr>
@@ -82,7 +102,19 @@ A total of 100% was covered.
 <hr>
 
 
+There needs to be objective evidence provided for the testing performed here. 
+Consider adding six main sections with screenshots to the testing:
+1.Manual testing of each section of the site (such as buttons, links etc)
+2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
+3.Code validation (CSS/HTML/JS using online tools like <https://jigsaw.w3.org/css-validator/> and JSHint) 
+4.Testing of all user stories/features 
+5.Documentation of any bugs encountered and their resolution steps
+6.Documentation of any open bugs Ideally, test cases should focus on each individual section of every page on the website. Each test case should be specific, objective, step-wise replicable. 
 
+Instead of adding a general overview saying that everything works fine, consider documenting tests on each element on the page (ie. buttons, input boxes, navigation links etc) by testing them in their happy flow and also the bad/exception flow, mentioning the expected and the observed results, and drawing a parallel between them. Consider using the following format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
+
+
+Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 
 
 <h1> Project 4 - Reddit Style Blog</h1>
