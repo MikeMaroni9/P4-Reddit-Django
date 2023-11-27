@@ -24,7 +24,7 @@ Fixed most of the validator errors, only left with few. Not reallt an errors as 
 3) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 <br>
 <br>
-Listing all posts in the profile menu added
+Listing all posts in the profile menu added with links taking each posts to each own detail view. 
 <br>
 <a href="https://ibb.co/V2tQLc3"><img src="https://i.ibb.co/D5t81HL/Profile-Page-Update.png" alt="Profile-Page-Update" border="0"></a>
 
