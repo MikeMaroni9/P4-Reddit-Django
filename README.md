@@ -30,15 +30,6 @@ Acceptance Criteria added to all User Stories.
 <br>
 <br>
 
-2) Some HTML Validation errors seen on :
-<br>
-
-   <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/</ul>
-   <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/detail/48</ul>
-   <ul>https://validator.w3.org/nu/?doc=https://project4-django-blog-x-24e6733e46ab.herokuapp.com/accounts/signup/</ul>
-
-
-Fixed most of the validator errors, only left with few. Not really an errors as suggestions how to better write and not use Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
 <br>
 <br>
 <br>
@@ -125,7 +116,6 @@ All test have comments attached to them explaining what each of the test is test
 A total of 100% was covered. 
 <hr>
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 4. There needs to be objective evidence provided for the testing performed here. 
 Consider adding six main sections with screenshots to the testing:
@@ -134,10 +124,144 @@ Consider adding six main sections with screenshots to the testing:
 1)Manual testing of each section of the site (such as buttons, links etc)
 <br>
 <br>
+<br>
+
+Navigation Bar DEFAULT - Upon opening a page the only 2 buttons accessible in Navigation bar is LOGIN and REGISTER
+<ol>
+   <li>LOGIN Button</li>
+   <ul>
+      <li> Expected - Pressing the LOGIN button it takes you to the login.html for a sign in.</li>
+      <li> Testing - Tested the feature by pressing Login button. </li>
+      <li> The redirect takes to the /accounts/login/ page.</li>
+   </ul>
+      <li>Sign In with Google</li>
+   <ul>
+      <li> Expected - can use google email to sing into the system.</li>
+      <li> Testing - Tested the feature by pressing the button. </li>
+      <li> The redirect takes to the confirmation screen - You are about to sign in using a third party account from Google. Upon pressing confirm taken to the list of logged in gmail accounts for signing in</li>
+   </ul>
+   </li>
+   <li>REGISTER Button</li>
+   <ul>
+      <li>Expected - takes you to the signup page for registering an account</li>
+      <li>Testing - Tested the feature by presing REGISTER button</li>
+      <li>The redirect takes oto the /accounts/signup/ page</li>
+   </ul>
+</ol>
+Navigation Bar LOGGED IN - Register and Login changes to New Post / Profile /Logout. 
+<br>
+<br>
+<ol>
+   <li>Profile</li>
+   <ul>
+      <li>Expected - Profile Button takes to the profile menu.</li>
+      <li>Testing - Tested the feature by pressing the button.</li>
+      <li>The redirect takes to the /profile/ menu.</li>
+   </ul>
+   <li>New Post</li>
+   <ul>
+      <li>Expected - opens a page for creating a new post</li>
+      <li>Testing - Pressed the New Post button</li>
+      <li>The feature acted as normally and opened an /newpost/ redirect</li>
+   </ul>
+   <li>Logout</li>
+   <ul>
+      <li>Expected - Signs out the current user.</li>
+      <li>Testing - Tested the feature by pressing the button</li>
+      <li>The feature acted as normally and takes you to the confirmation screen /accounts/logout/ where you have to press SIGN OUT to confirm that you wish to be signed out.</li>
+   </ul>
+</ol>
+</ol>
+<br>
+
+Profile Menu
+<br>
+<ol>
+   <li>Edit Button</li>
+   <ul>
+      <li>Expected - takes you to semi filled form for editing user profile</li>
+      <li>Testing - Tested the feature by pressing the button</li>
+      <li>The feature acted as normally and takes you to the /profile/edit/ form where information such as a username is already filled in. Ability to add first name and Last Name.</li>
+   </ul>
+</ol>
+Index HTML
+<ol>
+<br>
+   <li>Listing of Posts</li>
+   <ul>
+      <li>Expected - Clicking on any of the available posts takes to the post_detail page for full title and full content of the post as well as Comments section.</li>
+      <li>Testing - Tested the feature by pressing on a random post</li>
+      <li>The feature acted as normally and it did redirect to post detail page /detail/75/. </li>
+   </ul>
+</ol>
+Post Detail Page
+<ol>
+   <li>Back Button</li>
+   <ul>
+      <li>Expected - Takes you back from Post Detail page to the index.html</li>
+      <li>Testing - Tested the feature by pressing the button.</li>
+      <li>The feature acted as normally and it did redirect back to start screen with listing of all posts.</li>
+   </ul>
+   <li>Like Button</li>
+   <ul>
+      <li>Expected - ability to like the post and show support</li>
+      <li>Testing - Tested the feature by pressing the button.</li>
+      <li>The feature acted as normally and it did outline the like icon marking it red and increasing the counter of the likes underneath the post</li>
+   </ul>
+   <li>Add Comment</li>
+   <ul>
+      <li>Expected - Ability to leave comment underneath the post</li>
+      <li>Testing - Tested the feature by pressing the button</li>
+      <li>The feature acted as normally and redirected to the /detail/75/comment/ page with a form to add content. Pressing the button leaves the comment underneat the post. Sorted by -created_by filter.</li>
+   </ul>
+   <li>Left Comments can be edited or deleted by buttons next to the comments.</li>
+   <ul>
+      <li>Expected - Ability to edit the comments</li>
+      <li>Testing - Tested the feature by pressing the button.</li>
+      <li>The feature acted as normally and it did redirect to /detail/115/comment/edit/ where the comment was already prefilled with the ability to change it</li>
+   </ul>
+   <ul>
+      <li>Expected - Ability to delete the comments</li>
+      <li>Testing - Tested the feature by pressing the button.</li>
+      <li>The feature acted as normally and it did redirect to /detail/115/comment/delete/ where the confirmation was necessary to delete the comment. Both of these functions come with a cancel buttons as well taking user back to post_detail view without making any changes.</li>
+   </ul>
+</ol>
+Post Detail Page - Post Author
+<ol>
+   <li>Post Author Can Edit the Post</li>
+   <ul>
+      <li>Expected - To be able to change post title or content</li>
+      <li>Testing - Tested the feature by pressing the EDIT button next to the post in Post Detail View</li>
+      <li>The feature acted as normally and takes you to /detail/edit/78/ page where all the information is alreayd pre filled making it easy for you to edit it.</li>
+   </ul>
+   <li>Post Author can Delete the Post</li>
+   <ul>
+      <li>Expected - ability to Delete the post</li>
+      <li>Testing - Tested the feature by pressing the Delete button as a post author in Post Detail View.</li>
+      <li>The feature acted as normally and takes user to /detail/78/delete/ where confirmation is necessary before post can be removed.</li>
+   </ul>
+</ol>
+
+<br>
 2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
 <br>
 <br>
 3.Code validation (CSS/HTML/JS using online tools like https://jigsaw.w3.org/css-validator and JSHint) 
+<br>
+<br>
+CSS validator finds one error with a title and I can't fix it... if I fix it I can't load CSS in heroku I get no background no nothing, I have no idea, tried to fix for an hour. change the fontsize to correct one, doesn't work, change the font size to 180% - it breaks again. 
+<br>
+<br>
+<a href="https://ibb.co/bH42jQq"><img src="https://i.ibb.co/6vK1crV/wrc.png" alt="wrc" border="0"></a>
+<br>
+<br>
+Some HTML Validation errors seen on :
+<br>
+<br>
+<a href="https://ibb.co/ZdXrqBr"><img src="https://i.ibb.co/sjR48K4/html-checker.png" alt="html-checker" border="0"></a>
+<br>
+<br>
+Fixed most of the validator errors, only left with few. Not really an errors as suggestions how to better write and not use Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
 <br>
 <br>
 4.Testing of all user stories/features 
@@ -146,17 +270,27 @@ Consider adding six main sections with screenshots to the testing:
 5.Documentation of any bugs encountered and their resolution steps
 <br>
 <br>
+Currently only bug is that after creating a new comment and new post it takes back to the index page and not to the post detail page. Edit comment and delete comment works as it should. Have to work on redirect.
+<br>
+<br>
+<br>
 6.Documentation of any open bugs Ideally, test cases should focus on each individual section of every page on the website. Each test case should be specific, objective, step-wise replicable. 
 <br>
+
 <br>
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element on the page (ie. buttons, input boxes, navigation links etc) by testing them in their happy flow and also the bad/exception flow, mentioning the expected and the observed results, and drawing a parallel between them. 
-
-Consider using the following format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
-
 All code has been put through https://codebeautify.org/python-formatter-beautifier for general appearance and readability.
+<br>
+<br>
+<br>
+<br>
 
 
 
+
+
+<br>
+<br>
+<br>
 <h1> Project 4 - Reddit Style Blog</h1>
 <h2> mockddit</h2>
 <p> Blog type application where a registered user can create a new posts, or comment on already existing one.</p>
