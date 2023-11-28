@@ -246,6 +246,16 @@ Post Detail Page - Post Author
 2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
 <br>
 <br>
+Used : <a href="https://techsini.com/multi-mockup/index.php">Techsini Multi Mockup</a>
+<br>
+<br>
+Django did not let the website through had to use Chrome addon : <a href="https://chromewebstore.google.com/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe">Ignore X-Frame Headers</a>
+<br>
+<br>
+<br>
+<br>
+<a href="https://ibb.co/vDM8T12"><img src="https://i.ibb.co/TrN57cz/responsive.png" alt="responsive" border="0"></a>
+<br>
 3.Code validation (CSS/HTML/JS using online tools like https://jigsaw.w3.org/css-validator and JSHint) 
 <br>
 <br>
