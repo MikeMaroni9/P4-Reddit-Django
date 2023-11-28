@@ -32,7 +32,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-xkpgn9x9z1x.ws-eu106.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-adb8vgqvh2a.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['project4-django-blog-x-24e6733e46ab.herokuapp.com', 'localhost', '8000-mikemaroni9-p4redditdja-adb8vgqvh2a.ws-eu106.gitpod.io']
 
 
 # Application definition
