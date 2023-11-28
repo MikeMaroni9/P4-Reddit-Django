@@ -28,11 +28,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'sdfsd09823jSDADFmkl23412'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-xkpgn9x9z1x.ws-eu106.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-pralakig0vy.ws-eu104.gitpod.io', 'project4-django-blog-x-24e6733e46ab.herokuapp.com', '8000-mikemaroni9-p4redditdja-stnjzzils6l.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['8000-mikemaroni9-p4redditdja-xkpgn9x9z1x.ws-eu106.gitpod.io', 'localhost', '8000-mikemaroni9-p4redditdja-pralakig0vy.ws-eu104.gitpod.io', 'project4-django-blog-x-24e6733e46ab.herokuapp.com', '8000-mikemaroni9-p4redditdja-3zpigceb8k7.ws-eu106.gitpod.io']
 
 
 # Application definition

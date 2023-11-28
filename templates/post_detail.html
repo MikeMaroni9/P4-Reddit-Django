@@ -71,7 +71,7 @@
 <br>
 
 <div class="container">
-    <div class="col-md-10 card mb-4  mt-3 ">
+    <div class="col-md-10 card mb-4 mt-3">
         <h3>Comments:</h3>
         <div class="card-body">
             <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -84,12 +84,12 @@
                     </span> wrote:
                 </p>
                 {{ comment.body | linebreaks }}
-                {% if user.is_authenticated and user.id == comment.author.id %}
-                    <div class="edit-delete-buttons">
-                        <a href="{% url 'edit_comment' comment.post.pk comment.pk %}">
+                {% if user.is_authenticated and user.username == comment.name %}
+                    <div class="edit-delete-buttons d-flex justify-content-end">
+                        <a href="{% url 'editcomment' comment.pk %}">
                             <button type="button" class="btn btn-light btn-outline-danger">Edit</button>
                         </a>
-                        <a href="{% url 'delete_comment' comment.post.pk comment.pk %}">
+                        <a href="{% url 'deletecomment' comment.pk %}">
                             <button type="button" class="btn btn-danger">Delete</button>
                         </a>
                     </div>
@@ -100,5 +100,3 @@
     </div>
 </div>
 {% endblock content %}
-
-

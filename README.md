@@ -63,7 +63,20 @@ Achieved by adding Post Filter option to the Post models class, with multiple se
 <br>
 <a href="https://ibb.co/x3G4xgN"><img src="https://i.ibb.co/4JMQhSH/newnew.png" alt="newnew" border="0"></a>
 <br>
+<br>
+<br>
+Comment section upgraded, comments are now editable and deletable. 
+<br>
+<br>
+<a href="https://ibb.co/ZxgN33d"><img src="https://i.ibb.co/4pSJccW/comments-1.png" alt="comments-1" border="0"></a><br>
 
+<br>
+<br>
+<a href="https://ibb.co/9wMRybP"><img src="https://i.ibb.co/s5BLsK7/comment-3.png" alt="comment-3" border="0"></a>
+<br>
+<br>
+<a href="https://ibb.co/VwpkqyJ"><img src="https://i.ibb.co/FHqdDvm/comment-2.png" alt="comment-2" border="0"></a>
+<br>
 
 LO4 - Create automated tests for a Full-Stack Web application using an MVC framework and related contemporary technologies:
 
