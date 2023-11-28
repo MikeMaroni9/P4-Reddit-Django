@@ -7,7 +7,8 @@
 <br><br>
 Unfortunately this second submission failed, leaving me with the final attempt to pass the Project 4.</p>
 <a href="https://drive.google.com/file/d/150gy7Fj_-rUseUz-EINGW9FHZY9u1Ehp/view?usp=drive_link">Evaluation Details</a>
-
+<br>
+<br>
 <p>Most of the project passed the criteria so I focused only on improving the topics that were hightlighted to me. Without changing the core of the project.</p>
 <p>Here's the list of comments with my solutions added underneath. </p>
 <hr>
@@ -38,6 +39,9 @@ Acceptance Criteria added to all User Stories.
 
 
 Fixed most of the validator errors, only left with few. Not really an errors as suggestions how to better write and not use Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
+<br>
+<br>
+<br>
 
 
 3) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
@@ -47,19 +51,26 @@ Listing all posts in the profile menu added with links taking each posts to each
 <br>
 <a href="https://ibb.co/V2tQLc3"><img src="https://i.ibb.co/D5t81HL/Profile-Page-Update.png" alt="Profile-Page-Update" border="0"></a>
 <br>
+<br>
 Category Selection added when creating a new post.
+<br>
 <br>
 <a href="https://ibb.co/HTLqk0w"><img src="https://i.ibb.co/xqK6Ry9/category-added-for-new-posts.png" alt="category-added-for-new-posts" border="0"></a>
 <br>
 Category can be seen by each individual post in Index html
 <br>
+<br>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/LpRbdsh/post-category.png" alt="post-category" border="0"></a>
+<br>
 <br>
 And in post detail view upon opening the post
 <br>
+<br>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/xzKYNc6/post-category-2.png" alt="post-category-2" border="0"></a>
 <br>
+<br>
 Achieved by adding Post Filter option to the Post models class, with multiple selection filter.
+<br>
 <br>
 <a href="https://ibb.co/x3G4xgN"><img src="https://i.ibb.co/4JMQhSH/newnew.png" alt="newnew" border="0"></a>
 <br>
@@ -114,20 +125,36 @@ All test have comments attached to them explaining what each of the test is test
 A total of 100% was covered. 
 <hr>
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-There needs to be objective evidence provided for the testing performed here. 
+4. There needs to be objective evidence provided for the testing performed here. 
 Consider adding six main sections with screenshots to the testing:
-1.Manual testing of each section of the site (such as buttons, links etc)
+
+<br>
+1)Manual testing of each section of the site (such as buttons, links etc)
+<br>
+<br>
 2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
-3.Code validation (CSS/HTML/JS using online tools like <https://jigsaw.w3.org/css-validator/> and JSHint) 
+<br>
+<br>
+3.Code validation (CSS/HTML/JS using online tools like https://jigsaw.w3.org/css-validator and JSHint) 
+<br>
+<br>
 4.Testing of all user stories/features 
+<br>
+<br>
 5.Documentation of any bugs encountered and their resolution steps
+<br>
+<br>
 6.Documentation of any open bugs Ideally, test cases should focus on each individual section of every page on the website. Each test case should be specific, objective, step-wise replicable. 
+<br>
+<br>
+Instead of adding a general overview saying that everything works fine, consider documenting tests on each element on the page (ie. buttons, input boxes, navigation links etc) by testing them in their happy flow and also the bad/exception flow, mentioning the expected and the observed results, and drawing a parallel between them. 
 
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element on the page (ie. buttons, input boxes, navigation links etc) by testing them in their happy flow and also the bad/exception flow, mentioning the expected and the observed results, and drawing a parallel between them. Consider using the following format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
+Consider using the following format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
 
+All code has been put through https://codebeautify.org/python-formatter-beautifier for general appearance and readability.
 
-Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 
 
 <h1> Project 4 - Reddit Style Blog</h1>

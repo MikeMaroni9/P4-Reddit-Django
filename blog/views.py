@@ -1,5 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
 from django.views import generic, View
 from django.contrib.auth.forms import UserChangeForm
 from .models import Post, Comment
@@ -14,7 +20,7 @@ Main view of the page, displays index page and paginates the pages if posts > 6
 
 class Home(ListView):
     model = Post
-    template_name = 'index.html'
+    template_name = "index.html"
     paginate_by = 6
 
 
@@ -27,7 +33,7 @@ Likes for the post. Also includes comment section,
 
 class PostDetail(DetailView):
     model = Post
-    template_name = 'post_detail.html'
+    template_name = "post_detail.html"
 
     def get(self, request, pk, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -60,8 +66,12 @@ View for creating a New Post. Logged in users have the ability to:
 
 class AddPost(CreateView):
     model = Post
-    template_name = 'add_post.html'
-    fields = 'title', 'content', 'post_filter',
+    template_name = "add_post.html"
+    fields = (
+        "title",
+        "content",
+        "post_filter",
+    )
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -77,13 +87,13 @@ so does the comment is placed underneath the correct post.
 
 class AddComment(CreateView):
     model = Comment
-    template_name = 'add_comment.html'
-    fields = 'body',
-    success_url = reverse_lazy('index')
+    template_name = "add_comment.html"
+    fields = ("body",)
+    success_url = reverse_lazy("index")
 
     def form_valid(self, form):
         form.instance.name = self.request.user
-        form.instance.post_id = self.kwargs.get('pk')
+        form.instance.post_id = self.kwargs.get("pk")
         return super().form_valid(form)
 
 
@@ -93,10 +103,14 @@ Ability to  EDIT the POST.
 """
 
 
-class EditPost (UpdateView):
+class EditPost(UpdateView):
     model = Post
     template_name = "edit_post.html"
-    fields = ['title', 'content', 'post_filter',]
+    fields = [
+        "title",
+        "content",
+        "post_filter",
+    ]
 
 
 """
@@ -105,10 +119,10 @@ Ability to  DELETE the POST.
 """
 
 
-class DeletePost (DeleteView):
+class DeletePost(DeleteView):
     model = Post
     template_name = "delete_post.html"
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy("index")
 
 
 """
@@ -117,7 +131,6 @@ Ability for the logged in user to leave a like under a POST.
 
 
 class PostLike(View):
-
     def post(self, request, pk, *args, **kwargs):
         post = get_object_or_404(Post, pk=pk)
         if post.likes.filter(id=request.user.id).exists():
@@ -125,7 +138,7 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('postdetail', args=[pk]))
+        return HttpResponseRedirect(reverse("postdetail", args=[pk]))
 
 
 """
@@ -136,34 +149,34 @@ Username, Email, First Name,Last Name.
 
 
 def profile(request):
-    return render(request, 'profile.html')
+    return render(request, "profile.html")
 
 
 def edit_profile(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = EditProfileForm(request.POST, instance=request.user)
 
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect("profile")
     else:
         form = EditProfileForm(instance=request.user)
-        args = {'form': form}
-        return render(request, 'edit_profile.html', args)
+        args = {"form": form}
+        return render(request, "edit_profile.html", args)
 
 
 class EditComment(UpdateView):
     model = Comment
-    template_name = 'edit_comment.html'
+    template_name = "edit_comment.html"
     form_class = CommentForm
 
     def get_success_url(self):
-        return reverse_lazy('postdetail', args=[self.object.post.id])
+        return reverse_lazy("postdetail", args=[self.object.post.id])
 
 
 class DeleteComment(DeleteView):
     model = Comment
-    template_name = 'delete_comment.html'
+    template_name = "delete_comment.html"
 
     def get_success_url(self):
-        return reverse_lazy('postdetail', args=[self.object.post.id])
+        return reverse_lazy("postdetail", args=[self.object.post.id])

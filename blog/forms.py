@@ -12,7 +12,7 @@ Custom Comment form, using only body section of the form
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('body',)
+        fields = ("body",)
 
 
 """
@@ -26,4 +26,4 @@ class EditProfileForm(UserChangeForm):
     class Meta:
 
         model = User
-        fields = ('username', 'email', 'first_name', 'last_name')
+        fields = ("username", "email", "first_name", "last_name")
