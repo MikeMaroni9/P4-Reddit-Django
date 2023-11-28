@@ -13,9 +13,7 @@ Unfortunately this second submission failed, leaving me with the final attempt t
 <p>Here's the list of comments with my solutions added underneath. </p>
 <hr>
 <br>
-
 1) Acceptable use of Agile software developement tools, with scope for improvement with documentation of sprints and milestones
-
 <br>
 <br>
 The USER STORIES have been update, missing ones added. They have always been in the project but wasn't defined as such. Milestones created for Interations and user stories divided per subject.
@@ -23,19 +21,15 @@ The USER STORIES have been update, missing ones added. They have always been in 
 <br>
 <a href="https://ibb.co/wzxzVYw"><img src="https://i.ibb.co/Kr3rdmL/1-milestones.png" alt="1-milestones" border="0"></a>
 <br>
+<br>
 Acceptance Criteria added to all User Stories.
 <br>
+<br>
 <a href="https://ibb.co/0hRJMXj"><img src="https://i.ibb.co/RzkH0Sp/2-Acceptance-Criteria.png" alt="2-Acceptance-Criteria" border="0"></a>
-
-<br>
-<br>
-
 <br>
 <br>
 <br>
-
-
-3) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
+2) Listing the posts made by the user on the profile page could have added some depth to this project overall, as would have creating new custom models like a contact model or some category models etc.
 <br>
 <br>
 Listing all posts in the profile menu added with links taking each posts to each own detail view. 
@@ -87,7 +81,6 @@ LO4 - Create automated tests for a Full-Stack Web application using an MVC frame
 7) 4.3  No  Minimal evidence of testing within the project
 
 <h2>Testing</h2>
-<hr>
 I created 3 individual files = test_models.py, test_views.py and test_forms.py that covered most of the testing process and also created test_admin file to fill out the necessary coverage to get it to 100%.
 <br> 
 <br> 
@@ -95,31 +88,26 @@ For testing purposes I have installed the Coverage.py as a tool for measuring co
 <br>
 <br>
 <a href="https://ibb.co/kcs4Wqz"><img src="https://i.ibb.co/DKH9Swm/1-install-coverage.png" alt="1-install-coverage" border="0"></a>
-
+<br>
 I ran the program via the code: 
 <br>
 <br>
 <a href="https://ibb.co/3ydnByx"><img src="https://i.ibb.co/KjhJFjt/2-coverage-test-run.png" alt="2-coverage-test-run" border="0"></a>
 <br>
-
 The code ran 22 tests in 13.534 sec and found no errors.
 <br>
 And after the test has executed I ran the “coverage report” command to see the total coverage of the unit test created. 
 <br>
-
+<br>
 <a href="https://ibb.co/42CPJSq"><img src="https://i.ibb.co/FXcgnYr/3-coverage-report.png" alt="3-coverage-report" border="0"></a>
 <br>
-
 All test have comments attached to them explaining what each of the test is testing for.
 <br>
-
 A total of 100% was covered. 
 <hr>
-
-
-4. There needs to be objective evidence provided for the testing performed here. 
+3. There needs to be objective evidence provided for the testing performed here. 
 Consider adding six main sections with screenshots to the testing:
-
+<br>
 <br>
 1)Manual testing of each section of the site (such as buttons, links etc)
 <br>
@@ -171,10 +159,9 @@ Navigation Bar LOGGED IN - Register and Login changes to New Post / Profile /Log
       <li>The feature acted as normally and takes you to the confirmation screen /accounts/logout/ where you have to press SIGN OUT to confirm that you wish to be signed out.</li>
    </ul>
 </ol>
-</ol>
 <br>
-
 Profile Menu
+<br>
 <br>
 <ol>
    <li>Edit Button</li>
@@ -187,6 +174,7 @@ Profile Menu
 Index HTML
 <ol>
 <br>
+<br>
    <li>Listing of Posts</li>
    <ul>
       <li>Expected - Clicking on any of the available posts takes to the post_detail page for full title and full content of the post as well as Comments section.</li>
@@ -195,6 +183,8 @@ Index HTML
    </ul>
 </ol>
 Post Detail Page
+<br>
+<br>
 <ol>
    <li>Back Button</li>
    <ul>
@@ -227,6 +217,8 @@ Post Detail Page
    </ul>
 </ol>
 Post Detail Page - Post Author
+<br>
+<br>
 <ol>
    <li>Post Author Can Edit the Post</li>
    <ul>
@@ -243,7 +235,7 @@ Post Detail Page - Post Author
 </ol>
 
 <br>
-2.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
+4.Testing site responsiveness using a site like <https://responsivedesignchecker.com/>
 <br>
 <br>
 Used : <a href="https://techsini.com/multi-mockup/index.php">Techsini Multi Mockup</a>
@@ -256,7 +248,7 @@ Django did not let the website through had to use Chrome addon : <a href="https:
 <br>
 <a href="https://ibb.co/vDM8T12"><img src="https://i.ibb.co/TrN57cz/responsive.png" alt="responsive" border="0"></a>
 <br>
-3.Code validation (CSS/HTML/JS using online tools like https://jigsaw.w3.org/css-validator and JSHint) 
+5.Code validation (CSS/HTML/JS using online tools like https://jigsaw.w3.org/css-validator and JSHint) 
 <br>
 <br>
 CSS validator finds one error with a title and I can't fix it... if I fix it I can't load CSS in heroku I get no background no nothing, I have no idea, tried to fix for an hour. change the fontsize to correct one, doesn't work, change the font size to 180% - it breaks again. 
@@ -274,34 +266,27 @@ Some HTML Validation errors seen on :
 Fixed most of the validator errors, only left with few. Not really an errors as suggestions how to better write and not use Buttons inside a tags, but if I fix it with span instead then my CSS styling dissapears and I have much bigger issues that I would like to address than to fix those at the moment. If I will have time I will come back to it before handing in the project. But even without the absolutely clean code last time the code went in for a review it passed, so I don't think it's such a crucial part.
 <br>
 <br>
-4.Testing of all user stories/features 
-<br>
-<br>
-5.Documentation of any bugs encountered and their resolution steps
+6.Documentation of any bugs encountered and their resolution steps
 <br>
 <br>
 Currently only bug is that after creating a new comment and new post it takes back to the index page and not to the post detail page. Edit comment and delete comment works as it should. Have to work on redirect.
 <br>
-<br>
-<br>
-6.Documentation of any open bugs Ideally, test cases should focus on each individual section of every page on the website. Each test case should be specific, objective, step-wise replicable. 
-<br>
-
 <br>
 All code has been put through https://codebeautify.org/python-formatter-beautifier for general appearance and readability.
 <br>
 <br>
 <br>
 <br>
-
-
-
-
-
 <br>
 <br>
 <br>
-<h1> Project 4 - Reddit Style Blog</h1>
+<hr>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+<h1> Project 4 - Reddit Style Blog README</h1>
 <h2> mockddit</h2>
 <p> Blog type application where a registered user can create a new posts, or comment on already existing one.</p>
 <p> Developed using : HTML, CSS, JAVASCRIPT, PYTHON, BOOTSTRAP and DJANGO</p>
